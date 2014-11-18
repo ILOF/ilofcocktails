@@ -10,14 +10,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Instagrim</title>
+        <title>ilofcocktails</title>
         <link rel="stylesheet" type="text/css" href="Styles.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
         <header>
-            <h1>InstaGrim ! </h1>
-            <h2>Your world in Black and White</h2>
+            <h1>ILOF Cocktails </h1>
         </header>
         <nav>
             <ul>
@@ -32,7 +31,7 @@
                             if (lg.getlogedin()) {
                     %>
 
-                <li><a href="/Instagrim/Images/<%=lg.getUsername()%>">Your Images</a></li>
+                <li><a href="/ilofcocktails/Images/<%=lg.getUsername()%>">Your Images</a></li>
                     <%}
                             }else{
                                 %>
@@ -46,7 +45,7 @@
         </nav>
         <footer>
             <ul>
-                <li class="footer"><a href="/Instagrim">Home</a></li>
+                <li class="footer"><a href="/ilofcocktails">Home</a></li>
                 <li>&COPY; Andy C</li>
             </ul>
         </footer>

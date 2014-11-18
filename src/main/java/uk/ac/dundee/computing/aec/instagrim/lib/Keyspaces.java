@@ -14,7 +14,30 @@ public final class Keyspaces {
     public static void SetUpKeySpaces(Cluster c) {
         try {
             //Add some keyspaces here
-            String createkeyspace = "create keyspace if not exists instagrim  WITH replication = {'class':'SimpleStrategy', 'replication_factor':1}";
+            String createkeyspace = "create keyspace if not exists ilofcocktails  WITH replication = {'class':'SimpleStrategy', 'replication_factor':1}";
+            
+            String CreateCocktailsTable = "CREATE TABLE if not exists ilofcocktails.cocktails (\n"
+                    + "      drinkid text,\n"
+                    + "      name text,\n"
+                    + "      type text,\n"
+                    + "      glass text,\n"
+                    + "      garnish text,\n"
+                    + "      occasion text,\n"
+                    + "      ingredients text,\n"
+                    + "      soi1 text,\n"
+                    + "      soi2 text,\n"
+                    + "      soi3 text,\n"
+                    + "      soi4 text,\n"
+                    + "      soi5 text,\n"
+                    + "      soi6 text,\n"
+                    + "      soi7 text,\n"
+                    + "      soi8 text,\n"
+                    + "      soi9 text,\n"
+                    + "      soi10 text,\n"
+                    + "      soi11 text,\n"       
+                    + "      PRIMARY KEY (drinkid)"
+                    + "  );";
+            /*
             String CreatePicTable = "CREATE TABLE if not exists instagrim.Pics ("
                     + " user varchar,"
                     + " picid uuid, "
@@ -41,28 +64,50 @@ public final class Keyspaces {
                     + "      city text,\n"
                     + "      zip int\n"
                     + "  );";
-            String CreateUserProfile = "CREATE TABLE if not exists instagrim.userprofiles (\n"
+            */
+            String CreateUserProfile = "CREATE TABLE if not exists ilofcocktails.userprofiles (\n"
                     + "      login text PRIMARY KEY,\n"
                      + "     password text,\n"
                     + "      first_name text,\n"
                     + "      last_name text,\n"
-                    + "      email set<text>,\n"
-                    + "      addresses  map<text, frozen <address>>\n"
+                    + "      email set<text>\n"
                     + "  );";
+            
+            
+            
+            
             Session session = c.connect();
             try {
                 PreparedStatement statement = session
                         .prepare(createkeyspace);
-                BoundStatement boundStatement = new BoundStatement(
-                        statement);
-                ResultSet rs = session
-                        .execute(boundStatement);
-                System.out.println("created instagrim ");
+                BoundStatement boundStatement = new BoundStatement(statement);
+                ResultSet rs = session.execute(boundStatement);
+                System.out.println("created ilofcocktails ");
             } catch (Exception et) {
-                System.out.println("Can't create instagrim " + et);
+                System.out.println("Can't create ilofcocktails " + et);
             }
 
-            //now add some column families 
+                //now add some column families 
+            
+            System.out.println("" + CreateCocktailsTable);
+            try {
+                SimpleStatement cqlQuery = new SimpleStatement(CreateCocktailsTable);
+                session.execute(cqlQuery);
+            } catch (Exception et) {
+                System.out.println("Can't create cocktails table " + et);
+            }            
+                                       
+            System.out.println("" + CreateUserProfile);
+            try {
+                SimpleStatement cqlQuery = new SimpleStatement(CreateUserProfile);
+                session.execute(cqlQuery);
+            } catch (Exception et) {
+                System.out.println("Can't create Address Profile " + et);
+            }
+            
+             session.close();
+            
+            /*
             System.out.println("" + CreatePicTable);
 
             try {
@@ -85,15 +130,9 @@ public final class Keyspaces {
                 session.execute(cqlQuery);
             } catch (Exception et) {
                 System.out.println("Can't create Address type " + et);
-            }
-            System.out.println("" + CreateUserProfile);
-            try {
-                SimpleStatement cqlQuery = new SimpleStatement(CreateUserProfile);
-                session.execute(cqlQuery);
-            } catch (Exception et) {
-                System.out.println("Can't create Address Profile " + et);
-            }
-            session.close();
+            }            
+            */            
+           
 
         } catch (Exception et) {
             System.out.println("Other keyspace or coulm definition error" + et);

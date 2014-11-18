@@ -11,20 +11,20 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Instagrim</title>
-        <link rel="stylesheet" type="text/css" href="/Instagrim/Styles.css" />
+        <title>ilofcocktails</title>
+        <link rel="stylesheet" type="text/css" href="/ilofcocktails/Styles.css" />
     </head>
     <body>
         <header>
         
-        <h1>InstaGrim ! </h1>
+        <h1>ilofcocktails ! </h1>
         <h2>Your world in Black and White</h2>
         </header>
         
         <nav>
             <ul>
-                <li class="nav"><a href="/Instagrim/upload.jsp">Upload</a></li>
-                <li class="nav"><a href="/Instagrim/Images/majed">Sample Images</a></li>
+                <li class="nav"><a href="/ilofcocktails/upload.jsp">Upload</a></li>
+                <li class="nav"><a href="/ilofcocktails/Images/majed">Sample Images</a></li>
             </ul>
         </nav>
  
@@ -43,7 +43,7 @@
                 Pic p = (Pic) iterator.next();
 
         %>
-        <a href="/Instagrim/Image/<%=p.getSUUID()%>" ><img src="/Instagrim/Thumb/<%=p.getSUUID()%>"></a><br/><%
+        <a href="/ilofcocktails/Image/<%=p.getSUUID()%>" ><img src="/ilofcocktails/Thumb/<%=p.getSUUID()%>"></a><br/><%
 
             }
             }
@@ -51,7 +51,7 @@
         </article>
         <footer>
             <ul>
-                <li class="footer"><a href="/Instagrim">Home</a></li>
+                <li class="footer"><a href="/ilofcocktails">Home</a></li>
             </ul>
         </footer>
     </body>
