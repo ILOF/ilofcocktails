@@ -35,7 +35,7 @@ import static org.imgscalr.Scalr.*;
 import org.imgscalr.Scalr.Method;
 
 import uk.ac.dundee.computing.aec.instagrim.lib.*;
-import uk.ac.dundee.computing.aec.instagrim.stores.Pic;
+import uk.ac.dundee.computing.aec.instagrim.stores.*;
 //import uk.ac.dundee.computing.aec.stores.TweetStore;
 
 public class CocktailModel {
@@ -48,12 +48,34 @@ public class CocktailModel {
     public void setCluster(Cluster cluster) {
         this.cluster = cluster;
     }
-        // those are left just for reference, to be deleted in the final version
-    //public void insertPic(byte[] b, String type, String name, String user) {
-    //public byte[] picresize(String picid,String type) {
-    //public byte[] picdecolour(String picid,String type) {
-    //public static BufferedImage createThumbnail(BufferedImage img) {    
-    //public static BufferedImage createProcessed(BufferedImage img) {
+     
+    public java.util.LinkedList<CocktailStore> AllCocktails() {
+        java.util.LinkedList<CocktailStore> Cocktails = new java.util.LinkedList<>();
+        Session session = cluster.connect("ilofcocktails");
+        PreparedStatement ps = session.prepare("select * from cocktails");
+        ResultSet rs = null;
+        BoundStatement boundStatement = new BoundStatement(ps);
+        rs = session.execute( // this is where the query is executed
+                boundStatement.bind( // here you are binding the 'boundStatement'
+                ));
+        if (rs.isExhausted()) {
+            System.out.println("No cocktails (should never happen)");
+            return null;
+        } else {
+            for (Row row : rs) {
+                CocktailStore cs = new CocktailStore();
+                cs.setCocktailName(row.getString("name"));
+                System.out.println(row.getString("name"));
+                Cocktails.add(cs);
+
+            }
+        }
+
+        return Cocktails;
+
+    }
+
+    
    
     public java.util.LinkedList<Pic> getPicsForUser(String User) {
         java.util.LinkedList<Pic> Pics = new java.util.LinkedList<>();
