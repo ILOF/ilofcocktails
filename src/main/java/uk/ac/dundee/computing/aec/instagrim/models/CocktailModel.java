@@ -69,18 +69,18 @@ public class CocktailModel {
                 cs.setGlass(row.getString("glass"));
                 cs.setOcasion(row.getString("ocasion"));
                 cs.setType(row.getString("type"));
-                cs.setSoi1(row.getString("soi1"));
-                cs.setSoi2(row.getString("soi2"));
-                cs.setSoi3(row.getString("soi3"));
-                cs.setSoi4(row.getString("soi4"));
-                cs.setSoi5(row.getString("soi5"));
-                cs.setSoi6(row.getString("soi6"));
-                cs.setSoi7(row.getString("soi7"));
-                cs.setSoi8(row.getString("soi8"));
-                cs.setSoi9(row.getString("soi9"));
-                cs.setSoi10(row.getString("soi10"));
-                cs.setSoi11(row.getString("soi11"));
-                cs.setSoi12(row.getString("soi12"));
+                cs.setSoi1(row.getString("soi1").toLowerCase());
+                cs.setSoi2(row.getString("soi2").toLowerCase());
+                cs.setSoi3(row.getString("soi3").toLowerCase());
+                cs.setSoi4(row.getString("soi4").toLowerCase());
+                cs.setSoi5(row.getString("soi5").toLowerCase());
+                cs.setSoi6(row.getString("soi6").toLowerCase());
+                cs.setSoi7(row.getString("soi7").toLowerCase());
+                cs.setSoi8(row.getString("soi8").toLowerCase());
+                cs.setSoi9(row.getString("soi9").toLowerCase());
+                cs.setSoi10(row.getString("soi10").toLowerCase());
+                cs.setSoi11(row.getString("soi11").toLowerCase());
+                cs.setSoi12(row.getString("soi12").toLowerCase());
 
                 
                 Cocktails.add(cs);

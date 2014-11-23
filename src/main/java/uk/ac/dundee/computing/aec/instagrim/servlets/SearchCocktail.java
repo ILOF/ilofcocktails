@@ -42,7 +42,6 @@ public class SearchCocktail extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
                 String SearchCriteria = request.getParameter("searchCriteria");
 		SearchCriteria = SearchCriteria.toLowerCase();
-                SearchCriteria = SearchCriteria.replaceAll("\\s+","");
                 CocktailModel cm = new CocktailModel();
                 cm.setCluster(cluster);
                 java.util.LinkedList<CocktailStore> Cocktails = cm.SoftSearchIngredients(SearchCriteria);
