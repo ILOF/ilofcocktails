@@ -40,8 +40,8 @@ import uk.ac.dundee.computing.aec.instagrim.stores.Pic;
  * Servlet implementation class Image
  */
 @WebServlet(urlPatterns = {
-    "/Cocktails",
-    "/Cocktails/*"
+    "/AllCocktails",
+    "/AllCocktails/*"
     
 })
 @MultipartConfig
@@ -60,7 +60,7 @@ public class Cocktail extends HttpServlet {
     public Cocktail() {
         super();
         // TODO Auto-generated constructor stub
-        CommandsMap.put("Cocktails", 1);
+        CommandsMap.put("AllCocktails", 1);
        
 
     }

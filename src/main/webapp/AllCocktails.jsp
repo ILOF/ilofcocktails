@@ -36,6 +36,12 @@ testing for commit
  
         <article>
             <h1>All cocktails</h1>
+             <form method="POST" action="/ilofcocktails/SearchCocktail">
+        		<input type="text" name="searchCriteria" placeholder="seperate ingretdeiants by commas">
+        							
+        	<input type="submit"	value="Search"> <br><br>	
+        </form>         
+            
         <%
             CocktailModel cm = new CocktailModel();
             Cluster cluster;
@@ -56,7 +62,10 @@ testing for commit
                 CocktailStore c = Cocktails.get(i);
 
         %>
-        <a><% out.println(c.getCocktailName()); %></a><br> <%
+        <a><% out.println(c.getCocktailName()); %></a><br>
+
+        
+        <%
 
             }
             }

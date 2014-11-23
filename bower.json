@@ -1,0 +1,20 @@
+{
+  "name": "ilofcocktails",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ILOF/ilofcocktails",
+  "authors": [
+    "Alexander Macdonald <alexander.mac.93@gmail.com>"
+  ],
+  "description": "cocktail app",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.1"
+  }
+}
