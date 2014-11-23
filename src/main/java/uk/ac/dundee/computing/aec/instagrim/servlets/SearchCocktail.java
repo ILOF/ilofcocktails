@@ -21,8 +21,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import uk.ac.dundee.computing.aec.instagrim.lib.CassandraHosts;
+import uk.ac.dundee.computing.aec.instagrim.models.CocktailModel;
 import uk.ac.dundee.computing.aec.instagrim.models.PicModel;
 import uk.ac.dundee.computing.aec.instagrim.models.User;
+import uk.ac.dundee.computing.aec.instagrim.stores.CocktailStore;
 
 /**
  *
@@ -41,7 +43,12 @@ public class SearchCocktail extends HttpServlet {
                 String SearchCriteria = request.getParameter("searchCriteria");
 		SearchCriteria = SearchCriteria.toLowerCase();
                 SearchCriteria = SearchCriteria.replaceAll("\\s+","");
-                error(SearchCriteria, response);
+                CocktailModel cm = new CocktailModel();
+                cm.setCluster(cluster);
+                java.util.LinkedList<CocktailStore> Cocktails = cm.SoftSearchIngredients(SearchCriteria);
+                RequestDispatcher rd = request.getRequestDispatcher("/AllCocktails.jsp");
+                request.setAttribute("Cocktails", Cocktails);
+                rd.forward(request, response);
 		//get text box string
                 //remove white space, make lower case
                 //puts new string in to seach function on cocktail model

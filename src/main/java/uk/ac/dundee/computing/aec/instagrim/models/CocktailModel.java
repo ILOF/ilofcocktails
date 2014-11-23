@@ -87,10 +87,116 @@ public class CocktailModel {
 
             }
         }
+        
+        
 
         return Cocktails;
 
     }
+    
+        public java.util.LinkedList<CocktailStore> SoftSearchIngredients(String SearchCriteria) {
+                       //Generates linked list of all cocktails for seaching on
+            
+            //testing
+            System.out.println("MATE IM WORKING");
+                    String[] SearchWords = SearchCriteria.split(",");
+                    for (int i = 0; i < SearchWords.length; i++){
+                        System.out.println(SearchWords[i]);
+                    }
+                    
+                    //loop through each cocktail in cocktails
+                    //          loop through all ingrediants
+                    //check each ingredian with soi1-12
+                    //if match -  add current cocktail to COcktailsReturn
+                    
+                    java.util.LinkedList<CocktailStore> Cocktails = AllCocktails();
+                    java.util.LinkedList<CocktailStore> CocktailsReturn = new java.util.LinkedList<>();
+                    
+                   
+                    for (int j = 0; j < Cocktails.size(); j++) {
+                        CocktailStore currentCocktail = Cocktails.get(j);
+                        boolean returned = false;
+                        for (int k = 0; k < SearchWords.length; k++) {
+                            if (currentCocktail.getSoi1().contains(SearchWords[k])){
+                                if (!returned){
+                                CocktailsReturn.add(currentCocktail);
+                                returned = true;
+                                }
+                            }
+                            if (currentCocktail.getSoi2().contains(SearchWords[k])){
+                                if (!returned){
+                                CocktailsReturn.add(currentCocktail);
+                                returned = true;
+                                }
+                            }
+                            if (currentCocktail.getSoi3().contains(SearchWords[k])){
+                                if (!returned){
+                                CocktailsReturn.add(currentCocktail);
+                                returned = true;
+                                }
+                            }
+                            if (currentCocktail.getSoi4().contains(SearchWords[k])){
+                                if (!returned){
+                                CocktailsReturn.add(currentCocktail);
+                                returned = true;
+                                }
+                            }
+                            if (currentCocktail.getSoi5().contains(SearchWords[k])){
+                                if (!returned){
+                                CocktailsReturn.add(currentCocktail);
+                                returned = true;
+                                }
+                            }
+                            if (currentCocktail.getSoi6().contains(SearchWords[k])){
+                                if (!returned){
+                                CocktailsReturn.add(currentCocktail);
+                                returned = true;
+                                }
+                            }
+                            if (currentCocktail.getSoi7().contains(SearchWords[k])){
+                                if (!returned){
+                                CocktailsReturn.add(currentCocktail);
+                                returned = true;
+                                }
+                            }
+                            if (currentCocktail.getSoi8().contains(SearchWords[k])){
+                                if (!returned){
+                                CocktailsReturn.add(currentCocktail);
+                                returned = true;
+                                }
+                            }
+                            if (currentCocktail.getSoi9().contains(SearchWords[k])){
+                                if (!returned){
+                                CocktailsReturn.add(currentCocktail);
+                                returned = true;
+                                }
+                            }
+                            if (currentCocktail.getSoi10().contains(SearchWords[k])){
+                                if (!returned){
+                                CocktailsReturn.add(currentCocktail);
+                                returned = true;
+                                }
+                            }
+                            if (currentCocktail.getSoi11().contains(SearchWords[k])){
+                                if (!returned){
+                                CocktailsReturn.add(currentCocktail);
+                                returned = true;
+                                }
+                            }
+                            if (currentCocktail.getSoi12().contains(SearchWords[k])){
+                                if (!returned){
+                                CocktailsReturn.add(currentCocktail);
+                                returned = true;
+                                }
+                            }
+                            
+                        }
+                    }
+    
+                    return CocktailsReturn;
+            
+        }
+
 
     
    
