@@ -94,7 +94,73 @@ public class CocktailModel {
 
     }
     
-        public java.util.LinkedList<CocktailStore> SoftSearchIngredients(String SearchCriteria) {
+        public java.util.LinkedList<CocktailStore> SearchNames(String SearchCriteria) {
+               java.util.LinkedList<CocktailStore> Cocktails = AllCocktails();
+               java.util.LinkedList<CocktailStore> CocktailsReturn = new java.util.LinkedList<>();
+               for (int j = 0; j < Cocktails.size(); j++) {
+                        CocktailStore currentCocktail = Cocktails.get(j); 
+                        if(currentCocktail.getCocktailName().toLowerCase().contains(SearchCriteria.toLowerCase())  ){
+                            CocktailsReturn.add(currentCocktail);
+                        }
+                        
+               }
+               
+               return CocktailsReturn;
+
+            
+        }
+
+    public java.util.LinkedList<CocktailStore> SearchType(String SearchCriteria) {
+               java.util.LinkedList<CocktailStore> Cocktails = AllCocktails();
+               java.util.LinkedList<CocktailStore> CocktailsReturn = new java.util.LinkedList<>();
+               for (int j = 0; j < Cocktails.size(); j++) {
+                        CocktailStore currentCocktail = Cocktails.get(j); 
+                        if(currentCocktail.getType().toLowerCase().contains(SearchCriteria.toLowerCase())  ){
+                            CocktailsReturn.add(currentCocktail);
+                        }
+                        
+               }
+               
+               return CocktailsReturn;
+
+            
+        }
+        
+    public java.util.LinkedList<CocktailStore> SearchGlass(String SearchCriteria) {
+               java.util.LinkedList<CocktailStore> Cocktails = AllCocktails();
+               java.util.LinkedList<CocktailStore> CocktailsReturn = new java.util.LinkedList<>();
+               for (int j = 0; j < Cocktails.size(); j++) {
+                        CocktailStore currentCocktail = Cocktails.get(j); 
+                        if(currentCocktail.getGlass().toLowerCase().contains(SearchCriteria.toLowerCase())  ){
+                            CocktailsReturn.add(currentCocktail);
+                        }
+                        
+               }
+               
+               return CocktailsReturn;
+
+            
+        }
+    
+  public java.util.LinkedList<CocktailStore> SearchOcasion(String SearchCriteria) {
+               java.util.LinkedList<CocktailStore> Cocktails = AllCocktails();
+               java.util.LinkedList<CocktailStore> CocktailsReturn = new java.util.LinkedList<>();
+               for (int j = 0; j < Cocktails.size(); j++) {
+                        CocktailStore currentCocktail = Cocktails.get(j); 
+                        if(currentCocktail.getOcasion().toLowerCase().contains(SearchCriteria.toLowerCase())  ){
+                            CocktailsReturn.add(currentCocktail);
+                        }
+                        
+               }
+               
+               return CocktailsReturn;
+
+            
+        }
+    
+    
+                
+                public java.util.LinkedList<CocktailStore> SoftSearchIngredients(String SearchCriteria) {
                        //Generates linked list of all cocktails for seaching on
             
             //testing
@@ -184,6 +250,12 @@ public class CocktailModel {
                                 }
                             }
                             if (currentCocktail.getSoi12().contains(SearchWords[k])){
+                                if (!returned){
+                                CocktailsReturn.add(currentCocktail);
+                                returned = true;
+                                }
+                            }
+                            if (currentCocktail.getGarnish().contains(SearchWords[k])){
                                 if (!returned){
                                 CocktailsReturn.add(currentCocktail);
                                 returned = true;

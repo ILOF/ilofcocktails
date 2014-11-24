@@ -50,7 +50,11 @@ testing for commit
             //java.util.LinkedList<CocktailStore> Cocktails = cm.AllCocktails();
 
             java.util.LinkedList<CocktailStore> Cocktails = (java.util.LinkedList<CocktailStore>) request.getAttribute("Cocktails");
+            %>
+            <p><% out.println(Cocktails.size()); %></p>
+            <%
             if (Cocktails == null) {
+            
         %>
         <p>No cocktails son</p>
         <%
@@ -63,6 +67,7 @@ testing for commit
 
         %>
         <a><% out.println(c.getCocktailName()); %></a><br>
+
 
         
         <%

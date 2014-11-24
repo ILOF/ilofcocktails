@@ -35,6 +35,7 @@ public final class Keyspaces {
                     + "      soi9 text,\n"
                     + "      soi10 text,\n"
                     + "      soi11 text,\n"       
+                    + "      soi12 text,\n" 
                     + "      PRIMARY KEY (drinkid)"
                     + "  );";
             /*

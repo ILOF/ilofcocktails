@@ -44,7 +44,7 @@ public class SearchCocktail extends HttpServlet {
 		SearchCriteria = SearchCriteria.toLowerCase();
                 CocktailModel cm = new CocktailModel();
                 cm.setCluster(cluster);
-                java.util.LinkedList<CocktailStore> Cocktails = cm.SoftSearchIngredients(SearchCriteria);
+                java.util.LinkedList<CocktailStore> Cocktails = cm.SearchOcasion(SearchCriteria);
                 RequestDispatcher rd = request.getRequestDispatcher("/AllCocktails.jsp");
                 request.setAttribute("Cocktails", Cocktails);
                 rd.forward(request, response);
