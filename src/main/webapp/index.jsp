@@ -1,3 +1,4 @@
+
 <%-- 
     Document   : index
     Created on : Sep 28, 2014, 7:01:44 PM
@@ -10,18 +11,19 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ilofcocktails</title>
+        <title>Instagrim</title>
         <link rel="stylesheet" type="text/css" href="Styles.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
         <header>
-            <h1>ILOF Cocktails </h1>
+            <h1><center>InstaGrim ! </center></h1>
+        	<h2><center>Your world in Black and White</center></h2>        
         </header>
         <nav>
             <ul>
 
-                <li><a href="AllCocktails">All Cocktails</a></li>
+               
                 <li><a href="upload.jsp">Upload</a></li>
                     <%
                         
@@ -32,6 +34,7 @@
                     %>
 
                 <li><a href="/ilofcocktails/Images/<%=lg.getUsername()%>">Your Images</a></li>
+                <li><a href="/ilofcocktails/Logout">Logout</a></li>
                     <%}
                             }else{
                                 %>
@@ -45,8 +48,8 @@
         </nav>
         <footer>
             <ul>
-                <li class="footer"><a href="/ilofcocktails">Home</a></li>
-                <li>&COPY; Andy C</li>
+                <li class="footer"><a href="/Instagrim">Home</a></li>
+                <li>&COPY; Konstantin I.</li>
             </ul>
         </footer>
     </body>

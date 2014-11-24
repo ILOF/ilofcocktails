@@ -1,3 +1,4 @@
+
 <%-- 
     Document   : upload
     Created on : Sep 22, 2014, 6:31:50 PM
@@ -9,12 +10,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>ilofcocktails</title>
+        <title>Instagrim</title>
         <link rel="stylesheet" type="text/css" href="Styles.css" />
     </head>
     <body>
-        <h1>ilofcocktails ! </h1>
-        <h2>Your world in Black and White</h2>
+        <h1><center>InstaGrim ! </center></h1>
+        <h2><center>Your world in Black and White</center></h2>        
         <nav>
             <ul>
                 <li class="nav"><a href="upload.jsp">Upload</a></li>
@@ -34,7 +35,7 @@
         </article>
         <footer>
             <ul>
-                <li class="footer"><a href="/ilofcocktails">Home</a></li>
+                <li class="footer"><a href="/Instagrim">Home</a></li>
             </ul>
         </footer>
     </body>
