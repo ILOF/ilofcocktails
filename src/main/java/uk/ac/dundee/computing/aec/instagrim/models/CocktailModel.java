@@ -27,10 +27,13 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.PrintWriter;
 import java.nio.ByteBuffer;
 import java.util.Date;
 import java.util.LinkedList;
 import javax.imageio.ImageIO;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletResponse;
 import static org.imgscalr.Scalr.*;
 import org.imgscalr.Scalr.Method;
 
@@ -49,6 +52,7 @@ public class CocktailModel {
         this.cluster = cluster;
     }
      
+     
     public java.util.LinkedList<CocktailStore> AllCocktails() {
         java.util.LinkedList<CocktailStore> Cocktails = new java.util.LinkedList<>();
         Session session = cluster.connect("ilofcocktails");
@@ -64,6 +68,7 @@ public class CocktailModel {
         } else {
             for (Row row : rs) {
                 CocktailStore cs = new CocktailStore();
+                cs.setId(""+row.getInt("drinkid"));
                 cs.setCocktailName(row.getString("name"));
                 cs.setGarnish(row.getString("garnish"));
                 cs.setGlass(row.getString("glass"));
@@ -111,6 +116,8 @@ public class CocktailModel {
         }
 
     public java.util.LinkedList<CocktailStore> SearchType(String SearchCriteria) {
+        
+        
                java.util.LinkedList<CocktailStore> Cocktails = AllCocktails();
                java.util.LinkedList<CocktailStore> CocktailsReturn = new java.util.LinkedList<>();
                for (int j = 0; j < Cocktails.size(); j++) {
@@ -157,6 +164,67 @@ public class CocktailModel {
 
             
         }
+  
+    public java.util.LinkedList<CocktailStore> HardSearch(String SearchCriteria) {
+            //connect to db and get ingrediants
+                Session session = cluster.connect("ilofcocktails");
+        
+                String[] SearchWords = SearchCriteria.split(",");
+                for(int b = 0; b < SearchWords.length; b++){
+                }
+               java.util.LinkedList<CocktailStore> Cocktails = AllCocktails();
+               java.util.LinkedList<CocktailStore> CocktailsReturn = new java.util.LinkedList<>();
+               java.util.LinkedList<String> Ingredients = new java.util.LinkedList<>();
+                         int matches = 0;
+                         int noOfIngredients = 0;
+
+                         
+                         
+               for (int j = 0; j < Cocktails.size(); j++) {
+                        Ingredients.clear();
+                        CocktailStore currentCocktail = Cocktails.get(j);
+                        //get ingrediants for the current cocktail
+                        PreparedStatement ps = session.prepare("select * from ingredients where cocktailid=?");
+                        ResultSet rs = null;
+                        BoundStatement boundStatement = new BoundStatement(ps);
+                         rs = session.execute( // this is where the query is executed
+                        boundStatement.bind( // here you are binding the 'boundStatement'
+                            Integer.parseInt(currentCocktail.getId()))); 
+                         if (rs.isExhausted()) {
+                        System.out.println("No cocktails (should never happen)");
+                        return null;
+                        } else {
+                            for (Row row : rs) {
+                            Ingredients.add(row.getString("ingredient").toLowerCase());
+                            //System.out.println(row.getString("ingredient"));
+                            }
+                         }
+                         noOfIngredients = Ingredients.size();
+                         matches = 0;
+                        for (int k = 0; k < SearchWords.length; k++) {
+                            for (int m = 0; m < Ingredients.size(); m ++){
+                                if(SearchWords[k].equals(Ingredients.get(m))){
+                                    System.out.println(SearchWords[k]+" = "+Ingredients.get(m));
+
+                                    matches++;
+                                }
+                            }
+                        }
+                        if (matches >= Ingredients.size()-1){
+                            CocktailsReturn.add(currentCocktail);
+                        }
+
+                        //loop through ingrediants, loop through words
+                        //add to count if match, if all indrediants match, 
+                        //add to return list
+                        
+               }
+               
+               return CocktailsReturn;
+
+            
+        }
+    
     
     
                 

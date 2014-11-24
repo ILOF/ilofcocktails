@@ -12,6 +12,7 @@ package uk.ac.dundee.computing.aec.instagrim.stores;
  */
 public class CocktailStore {
     String Cocktailname=null;
+    private String id = null;
     private String Garnish = null;
     private String Glass  = null;
     private String Ocasion = null;
@@ -264,6 +265,20 @@ public class CocktailStore {
      */
     public void setSoi12(String soi12) {
         this.soi12 = soi12;
+    }
+
+    /**
+     * @return the id
+     */
+    public String getId() {
+        return id;
+    }
+
+    /**
+     * @param id the id to set
+     */
+    public void setId(String id) {
+        this.id = id;
     }
     
 }

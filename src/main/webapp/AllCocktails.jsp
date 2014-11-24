@@ -72,7 +72,7 @@ testing for commit
 
             java.util.LinkedList<CocktailStore> Cocktails = (java.util.LinkedList<CocktailStore>) request.getAttribute("Cocktails");
             %>
-            <p><% out.println(Cocktails.size()); %></p>
+            <p><% //out.println(Cocktails.size()); %></p>
             <%
             if (Cocktails == null) {                
         %>
@@ -90,7 +90,7 @@ testing for commit
                                 <div class="group">  
              <input type="text" required readonly>
 
-        <label><% out.println(c.getCocktailName()); %></label><br>
+        <label><% out.println(c.getCocktailName()+"   "+c.getId()); %></label><br>
 
                                 </div>
         
