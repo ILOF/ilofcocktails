@@ -34,14 +34,35 @@ testing for commit
             </ul>
         </nav>
  
-        <article>
-            <h1>All cocktails</h1>
-             <form method="POST" action="/ilofcocktails/SearchCocktail">
-        		<input type="text" name="searchCriteria" placeholder="seperate ingretdeiants by commas">
-        							
-        	<input type="submit"	value="Search"> <br><br>	
-        </form>         
+     
+        
+        <form method="POST" action="/ilofcocktails/SearchCocktail">
             
+                        <div class="group">  
+
+            <input type="text" required name = "searchCriteria">
+
+            <span class="bar"></span>
+                                    <span class="highlight"></span>
+
+            <label>Occasion e.g. Mothers Day</label>
+            
+       <%--   <input type="submit" value="Search"> <br><br> --%>
+             
+              </div>
+
+                    </form>         
+
+    
+    
+    
+    
+    
+   
+   
+        
+        <article>
+        
         <%
             CocktailModel cm = new CocktailModel();
             Cluster cluster;
@@ -53,8 +74,7 @@ testing for commit
             %>
             <p><% out.println(Cocktails.size()); %></p>
             <%
-            if (Cocktails == null) {
-            
+            if (Cocktails == null) {                
         %>
         <p>No cocktails son</p>
         <%
@@ -66,9 +86,13 @@ testing for commit
                 CocktailStore c = Cocktails.get(i);
 
         %>
-        <a><% out.println(c.getCocktailName()); %></a><br>
+        
+                                <div class="group">  
+             <input type="text" required readonly>
 
+        <label><% out.println(c.getCocktailName()); %></label><br>
 
+                                </div>
         
         <%
 

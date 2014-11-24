@@ -21,7 +21,7 @@
         <nav>
             <ul>
 
-               
+                <li><a href="AllCocktails">All Cocktails</a></li>
                 <li><a href="upload.jsp">Upload</a></li>
                     <%
                         
