@@ -1,3 +1,4 @@
+
 <%-- 
     Document   : register.jsp
     Created on : Sep 28, 2014, 6:29:51 PM
@@ -9,14 +10,16 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>ilofcocktails</title>
+        <title>Instagrim</title>
         <link rel="stylesheet" type="text/css" href="Styles.css" />
     </head>
+    
     <body>
         <header>
-        <h1>ilofcocktails ! </h1>
-        <h2>Your world in Black and White</h2>
+        <h1><center>InstaGrim ! </center></h1>
+        <h2><center>Your world in Black and White</center></h2>        
         </header>
+        
         <nav>
             <ul>
                 
@@ -32,7 +35,7 @@
                     <li>Password <input type="password" name="password"></li>
                 </ul>
                 <br/>
-                <input type="submit" value="Regidter"> 
+                <input type="submit" value="Register"> 
             </form>
 
         </article>

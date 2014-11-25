@@ -1,9 +1,8 @@
+
 <%-- 
     Document   : UsersPics
     Created on : Sep 24, 2014, 2:52:48 PM
     Author     : Administrator
-
-testing for commit
 --%>
 
 <%@page import="java.util.*"%>
@@ -13,14 +12,16 @@ testing for commit
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>ilofcocktails</title>
+        <title>Instagrim</title>
         <link rel="stylesheet" type="text/css" href="/ilofcocktails/Styles.css" />
     </head>
     <body>
         <header>
+        <%  LoggedIn lg = (LoggedIn) session.getAttribute("LoggedIn");%>
+        <h1><center>InstaGrim ! </center></h1>
+        <h2><center>Your world in Black and White</center></h2>
         
-        <h1>ilofcocktails ! </h1>
-        <h2>Your world in Black and White</h2>
+        <h2>Logged in as: <% out.println(lg.getUsername()); %></h2>
         </header>
         
         <nav>
@@ -39,13 +40,21 @@ testing for commit
         <p>No Pictures found</p>
         <%
         } else {
+        	/*
             Iterator<Pic> iterator;
             iterator = lsPics.iterator();
             while (iterator.hasNext()) {
                 Pic p = (Pic) iterator.next();
+                */
+            for (int i =0; i<lsPics.size(); i++ ){	// my code, replicates Andy's code above
+             	Pic p = lsPics.get(i);
+                
 
         %>
-        <a href="/ilofcocktails/Image/<%=p.getSUUID()%>" ><img src="/ilofcocktails/Thumb/<%=p.getSUUID()%>"></a><br/><%
+        <!-- deleted a "<br/>" at the end of the previous line, the Break made the pics display in a column-->
+        
+        <a href="/ilofcocktails/Image/<%=p.getSUUID()%>" ><img src="/ilofcocktails/Thumb/<%=p.getSUUID()%>"></a><%
+        
 
             }
             }

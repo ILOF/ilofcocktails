@@ -38,34 +38,7 @@ public final class Keyspaces {
                     + "      soi12 text,\n" 
                     + "      PRIMARY KEY (drinkid)"
                     + "  );";
-            /*
-            String CreatePicTable = "CREATE TABLE if not exists instagrim.Pics ("
-                    + " user varchar,"
-                    + " picid uuid, "
-                    + " interaction_time timestamp,"
-                    + " title varchar,"
-                    + " image blob,"
-                    + " thumb blob,"
-                    + " processed blob,"
-                    + " imagelength int,"
-                    + " thumblength int,"
-                    + "  processedlength int,"
-                    + " type  varchar,"
-                    + " name  varchar,"
-                    + " PRIMARY KEY (picid)"
-                    + ")";
-            String Createuserpiclist = "CREATE TABLE if not exists instagrim.userpiclist (\n"
-                    + "picid uuid,\n"
-                    + "user varchar,\n"
-                    + "pic_added timestamp,\n"
-                    + "PRIMARY KEY (user,pic_added)\n"
-                    + ") WITH CLUSTERING ORDER BY (pic_added desc);";
-            String CreateAddressType = "CREATE TYPE if not exists instagrim.address (\n"
-                    + "      street text,\n"
-                    + "      city text,\n"
-                    + "      zip int\n"
-                    + "  );";
-            */
+            
             String CreateUserProfile = "CREATE TABLE if not exists ilofcocktails.userprofiles (\n"
                     + "      login text PRIMARY KEY,\n"
                      + "     password text,\n"
@@ -74,7 +47,21 @@ public final class Keyspaces {
                     + "      email text\n"
                     + "  );";
             
+            String CreateIngredients = "CREATE TABLE if not exists ilofcocktails.ingredients (\n"
+                    + "      cocktailid int ,\n"
+                    + "      ingredient text, \n"
+                    + "      PRIMARY KEY(cocktailid, ingredient) "
+                    + "  );";
             
+            String CreateParty = "CREATE TABLE if not exists ilofcocktails.party (\n"
+                    + "      hostName text, \n"
+                    + "      date text, \n"
+                    + "      guests text, \n"
+                    + "      location text, \n"
+                    + "      cocktails text, \n"
+                    + "      description text, \n"
+                    + "      PRIMARY KEY(host, date) "
+                    + "  );";
             
             
             Session session = c.connect();
@@ -96,8 +83,8 @@ public final class Keyspaces {
                 session.execute(cqlQuery);
             } catch (Exception et) {
                 System.out.println("Can't create cocktails table " + et);
-            }            
-                                       
+            }      
+                                                   
             System.out.println("" + CreateUserProfile);
             try {
                 SimpleStatement cqlQuery = new SimpleStatement(CreateUserProfile);
@@ -106,33 +93,25 @@ public final class Keyspaces {
                 System.out.println("Can't create Address Profile " + et);
             }
             
+            System.out.println("" + CreateIngredients);
+            try {
+                SimpleStatement cqlQuery = new SimpleStatement(CreateIngredients);
+                session.execute(cqlQuery);
+            } catch (Exception et) {
+                System.out.println("Can't create cocktails table " + et);
+            }  
+            
+            
+            System.out.println("" + CreateParty);
+            try {
+                SimpleStatement cqlQuery = new SimpleStatement(CreateParty);
+                session.execute(cqlQuery);
+            } catch (Exception et) {
+                System.out.println("Can't create cocktails table " + et);
+            } 
+            
              session.close();
             
-            /*
-            System.out.println("" + CreatePicTable);
-
-            try {
-                SimpleStatement cqlQuery = new SimpleStatement(CreatePicTable);
-                session.execute(cqlQuery);
-            } catch (Exception et) {
-                System.out.println("Can't create tweet table " + et);
-            }
-            System.out.println("" + Createuserpiclist);
-
-            try {
-                SimpleStatement cqlQuery = new SimpleStatement(Createuserpiclist);
-                session.execute(cqlQuery);
-            } catch (Exception et) {
-                System.out.println("Can't create user pic list table " + et);
-            }
-            System.out.println("" + CreateAddressType);
-            try {
-                SimpleStatement cqlQuery = new SimpleStatement(CreateAddressType);
-                session.execute(cqlQuery);
-            } catch (Exception et) {
-                System.out.println("Can't create Address type " + et);
-            }            
-            */            
            
 
         } catch (Exception et) {
@@ -141,3 +120,5 @@ public final class Keyspaces {
 
     }
 }
+
+
