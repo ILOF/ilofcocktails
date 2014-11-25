@@ -90,12 +90,8 @@ public class CocktailModel {
 
                 
                 Cocktails.add(cs);
-
             }
         }
-        
-        
-
         return Cocktails;
 
     }

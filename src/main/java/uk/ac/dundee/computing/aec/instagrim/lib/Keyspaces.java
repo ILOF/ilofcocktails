@@ -53,7 +53,7 @@ public final class Keyspaces {
                     + "      PRIMARY KEY(cocktailid, ingredient) "
                     + "  );";
             
-            String CreateParty = "CREATE TABLE if not exists ilofcocktails.party (\n"
+            String CreateParties= "CREATE TABLE if not exists ilofcocktails.parties (\n"
                     + "      hostName text, \n"
                     + "      date text, \n"
                     + "      guests text, \n"
@@ -102,9 +102,9 @@ public final class Keyspaces {
             }  
             
             
-            System.out.println("" + CreateParty);
+            System.out.println("" + CreateParties);
             try {
-                SimpleStatement cqlQuery = new SimpleStatement(CreateParty);
+                SimpleStatement cqlQuery = new SimpleStatement(CreateParties);
                 session.execute(cqlQuery);
             } catch (Exception et) {
                 System.out.println("Can't create cocktails table " + et);

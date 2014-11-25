@@ -34,6 +34,8 @@
                     %>
 
                 <li><a href="/ilofcocktails/Images/<%=lg.getUsername()%>">Your Images</a></li>
+                <li><a href="/ilofcocktails/AllCocktails">List of all cocktails</a></li>
+                <li><a href="/ilofcocktails/PartyDetailsInput.jsp">Organise your party</a></li>
                 <li><a href="/ilofcocktails/Logout">Logout</a></li>
                     <%}
                             }else{
