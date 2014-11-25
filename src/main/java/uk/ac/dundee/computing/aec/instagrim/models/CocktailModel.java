@@ -161,6 +161,45 @@ public class CocktailModel {
 
             
         }
+  
+  public java.util.LinkedList<CocktailStore> ReturnTrending() {
+               java.util.LinkedList<CocktailStore> Cocktails = AllCocktails();
+               java.util.LinkedList<CocktailStore> CocktailsReturn = new java.util.LinkedList<>();
+               java.util.LinkedList<String> CocktailsTop = new java.util.LinkedList<>();
+
+               Session session = cluster.connect("ilofcocktails");
+                         PreparedStatement ps = session.prepare("select * from trending");
+                         ResultSet rs = null;
+                         BoundStatement boundStatement = new BoundStatement(ps);
+                         rs = session.execute( // this is where the query is executed
+                         boundStatement.bind( // here you are binding the 'boundStatement'
+                                            ));
+                         if (rs.isExhausted()) {
+                        System.out.println("No cocktails (should never happen)");
+                        return null;
+                        } else {
+
+                            for (Row row : rs) {
+                                CocktailsTop.add(""+row.getInt("cocktailid"));
+                            
+                            //System.out.println(row.getString("ingredient"));
+                            } 
+                         }
+                         
+                         for(int i = 0; i < CocktailsTop.size(); i++){
+                             for(int j = 0; j<Cocktails.size(); j++){
+                                 if(Cocktails.get(j).getId().equals(CocktailsTop.get(i))){
+                                     CocktailsReturn.add(Cocktails.get(j));
+                                 }
+                             }
+                         }
+                        
+               
+               
+               return CocktailsReturn;
+
+            
+        }
         //this will be overloaded to take in a party and use
       public ListStore ReturnShopping(java.util.LinkedList<String> ingredientsHad, java.util.LinkedList<String> CocktailIDs) {
           ListStore ls = new ListStore();
