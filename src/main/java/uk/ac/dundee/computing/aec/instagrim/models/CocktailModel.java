@@ -44,6 +44,7 @@ import uk.ac.dundee.computing.aec.instagrim.stores.*;
 public class CocktailModel {
 
     Cluster cluster;
+    private Object session;
 
     public void CocktailModel() {
     }
@@ -164,6 +165,57 @@ public class CocktailModel {
 
             
         }
+        //this will be overloaded to take in a party and use
+      public ListStore ReturnShopping(java.util.LinkedList<String> ingredientsHad, java.util.LinkedList<String> CocktailIDs) {
+          ListStore ls = new ListStore();
+          java.util.LinkedList<String> ingredientsNeeded = new java.util.LinkedList<>();
+          for (int j = 0; j<CocktailIDs.size(); j++){
+
+                        Session session = cluster.connect("ilofcocktails");
+                         PreparedStatement ps = session.prepare("select * from ingredients where cocktailid =?");
+                         ResultSet rs = null;
+                         BoundStatement boundStatement = new BoundStatement(ps);
+                         rs = session.execute( // this is where the query is executed
+                         boundStatement.bind( // here you are binding the 'boundStatement'
+                                            Integer.parseInt(CocktailIDs.get(j))));
+                         if (rs.isExhausted()) {
+                        System.out.println("No cocktails (should never happen)");
+                        return null;
+                        } else {
+                            for (Row row : rs) {
+                            if(!ingredientsNeeded.contains(row.getString("ingredient"))){
+                            ingredientsNeeded.add(row.getString("ingredient").toLowerCase());
+                            }
+                            //System.out.println(row.getString("ingredient"));
+                            }
+                         }
+
+          }
+          for(int i = 0; i < ingredientsNeeded.size(); i++){
+              if(!ingredientsHad.contains(ingredientsNeeded.get(i))){
+                  ls.addItem(ingredientsNeeded.get(i));
+              }
+          
+          }
+          
+          
+          
+          
+          
+          
+          
+          //loop though words -- 
+          //    loop through ingrediants --
+          //if match, dont push ingrediant on to the ListStore -- if not.. do.. lawl
+          
+          
+          
+          return ls;
+          
+      }
+      
+
+
   
     public java.util.LinkedList<CocktailStore> HardSearch(String SearchCriteria) {
             //connect to db and get ingrediants
@@ -177,8 +229,6 @@ public class CocktailModel {
                java.util.LinkedList<String> Ingredients = new java.util.LinkedList<>();
                          int matches = 0;
                          int noOfIngredients = 0;
-
-                         
                          
                for (int j = 0; j < Cocktails.size(); j++) {
                         Ingredients.clear();
