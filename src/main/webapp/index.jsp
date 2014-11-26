@@ -86,6 +86,19 @@
                         </style>
             </ul>
         </nav>
+                    
+                    
+                    <div id="placeholder">
+            <div id="search">
+                        <a href="/ilofcocktails/PartyDetailsInput.jsp" class="fill-div"></a>
+                    </div>
+            <div id="party">
+                        <a href="/ilofcocktails/PartyDetailsInput.jsp" class="fill-div"></a>
+                    </div>
+            <div id="trending">
+                        <a href="/ilofcocktails/PartyDetailsInput.jsp" class="fill-div"></a>
+                    </div>
+        </div>
         <footer>
             <ul>
                 <li>&COPY ILOFCocktails</li>

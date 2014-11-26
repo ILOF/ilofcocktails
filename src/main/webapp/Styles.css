@@ -105,7 +105,7 @@ input:valid ~ .hightlight {
 }
 
 
-            body {background-color:black;}
+            body {background-color:#2E2E2E;}
             
  
 
@@ -133,6 +133,43 @@ input:valid ~ .hightlight {
     text-decoration:none;
 }
 
+#placeholder{
+    width: 100%;
 
+}
+#party {
+    background-color: #A621A1;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+    opacity: 50%;
+}
+#search {
+    background-color: #FAA419;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 10%;
+    float: left;
+    opacity: 50%;
+}
+#trending {
+    background-color: #17FF45;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-left: 10%;
+    float: left;
+    opacity: 50%;
+}
+a.fill-div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
 
 
