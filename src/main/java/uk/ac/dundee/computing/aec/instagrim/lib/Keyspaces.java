@@ -54,12 +54,18 @@ public final class Keyspaces {
             
             String CreateParties= "CREATE TABLE if not exists ilofcocktails.parties (\n"
                     + "      hostName text, \n"
+                    + "      partyName text, \n"
                     + "      date text, \n"
                     + "      guests text, \n"
                     + "      location text, \n"
                     + "      cocktails text, \n"
                     + "      description text, \n"
                     + "      PRIMARY KEY(hostName, date) "
+                    + "  );";
+            
+            String CreateTrending = "CREATE TABLE if not exists ilofcocktails.trending (\n"
+                    + "      position int PRIMARY KEY,\n"
+                    + "      cocktailid  text, \n"                    
                     + "  );";
             
             
@@ -92,12 +98,21 @@ public final class Keyspaces {
                 System.out.println("Can't create Address Profile " + et);
             }
             
-            System.out.println("" + CreateIngredients);
+            System.out.println("" + CreateUserProfile);
             try {
-                SimpleStatement cqlQuery = new SimpleStatement(CreateIngredients);
+                SimpleStatement cqlQuery = new SimpleStatement(CreateUserProfile);
                 session.execute(cqlQuery);
             } catch (Exception et) {
-                System.out.println("Can't create cocktails table " + et);
+                System.out.println("Can't create Address Profile " + et);
+            }
+            
+            
+            System.out.println("" + CreateTrending);
+            try {
+                SimpleStatement cqlQuery = new SimpleStatement(CreateTrending);
+                session.execute(cqlQuery);
+            } catch (Exception et) {
+                System.out.println("Can't create Trending table " + et);
             }  
             
             
