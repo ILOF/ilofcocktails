@@ -102,7 +102,7 @@ input:valid ~ .hightlight {
 }
 
 
-            body {background-color:#2E2E2E;}
+            body {background-color:black;}
             
  
 
@@ -116,7 +116,7 @@ input:valid ~ .hightlight {
      nav{
      width: 10%;
      float: right;
-     font-family: Arial, Helvetica, sans-seri;
+     font-family: Arial, Helvetica, sans-serif;
      margin-top: -2%;
          
      }
@@ -140,6 +140,13 @@ input:valid ~ .hightlight {
 
 }
 
+#placeholder2{
+    float: left;
+    margin-left: 90%;
+    margin-top: 90%;
+    width: 100%;
+
+}
 #titlepad{
     float: left;
     margin-top: 5%;
@@ -147,28 +154,123 @@ input:valid ~ .hightlight {
 
 }
 #party {
-    background-color: #A621A1;
+    background-color: #8E44AD;
     width: 300px;
     height: 300px;
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
     float: left;
-    opacity: 0.4;
+    opacity: 0.85;
     
     font-family: 'Comfortaa', cursive;
     color:white;
     font-size:1.9vw;
     text-align:center;
 }
+#loginCircle {
+    background-color: #8E44AD;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+    opacity: 0.85;
+    
+    font-family: 'Comfortaa', cursive;
+    color:white;
+    font-size:1.9vw;
+    text-align:center;
+}
+#registercircle {
+    background-color: #8E44AD;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    margin-left: 20%;
+    margin-right: auto;
+    float: left;
+    opacity: 0.85;
+    
+    font-family: 'Comfortaa', cursive;
+    color:white;
+    font-size:1.9vw;
+    text-align:center;
+}
+labelpassword          {
+      font-family: "Arial", Helvetica, sans-serif	;
+
+  color:#999; 
+  font-size:18px;
+  font-weight:lighter;
+  position:absolute;
+  pointer-events:none;
+  left:26%;
+  top:48%;
+  transition:0.2s ease all; 
+}
+
+labelusername          {
+      font-family: "Arial", Helvetica, sans-serif	;
+
+  color:#999; 
+  font-size:18px;
+  font-weight:lighter;
+  position:absolute;
+  pointer-events:none;
+  left:26%;
+  top: -21% ;
+  transition:0.2s ease all; 
+}
+
+labelusernameregister          {
+      font-family: "Arial", Helvetica, sans-serif	;
+
+  color:#999; 
+  font-size:18px;
+  font-weight:lighter;
+  position:absolute;
+  pointer-events:none;
+  left:26%;
+  top: -10% ;
+  transition:0.2s ease all; 
+}
+
+labelemailr       {
+      font-family: "Arial", Helvetica, sans-serif	;
+
+  color:#999; 
+  font-size:18px;
+  font-weight:lighter;
+  position:absolute;
+  pointer-events:none;
+  left:26%;
+  top: 20% ;
+  transition:0.2s ease all; 
+}
+
+labelpasswordr       {
+      font-family: "Arial", Helvetica, sans-serif	;
+
+  color:#999; 
+  font-size:18px;
+  font-weight:lighter;
+  position:absolute;
+  pointer-events:none;
+  left:26%;
+  top: 77% ;
+  transition:0.2s ease all; 
+}
+
 #search {
-    background-color: #FAA419;
+    background-color: #E67E22;
     width: 300px;
     height: 300px;
     border-radius: 50%;
     margin-right: 10%;
     float: left;
-    opacity: 0.4;
+    opacity: 0.85;
     
     font-family:'Comfortaa', cursive;
     color:white;
@@ -190,14 +292,30 @@ input:valid ~ .hightlight {
     opacity: 1;
 }
 
+#loginform{
+    margin-bottom: auto; 
+    margin-top:    37%;
+    margin-left: 20%;
+    margin-right: 0%;
+    opacity: 1;
+}
+
+#registerform{
+    margin-bottom: auto; 
+    margin-top:    19%;
+    margin-left: 20%;
+    margin-right: 0%;
+    opacity: 1;
+}
+
 #trending {
-    background-color: #17FF45;
+    background-color: #27AE60;
     width: 300px;
     height: 300px;
     border-radius: 50%;
     margin-left: 10%;
     float: left;
-    opacity: 0.4;
+    opacity: 0.85;
     
     font-family: 'Comfortaa', cursive;
     color:white;
@@ -213,29 +331,15 @@ a.fill-div {
 }
 
  .header-image1{
-                            position:absolute;
+                       position:absolute;
                        top:0;
                        bottom:0;   
                        width: 100%;
                        height: 100%;
-                      max-height:100%;
+                       max-height:100%;
                       max-width:100%;
                      overflow:hidden;    
                      left: 0;
                      right: 0;
                      z-index:-1;
-                        }
-                                       
-         .header-image {
-                        position:absolute;
-                       top:0;
-                       bottom:0;   
-                       width: 100%;
-                       height: 100%;
-                      max-height:100%;
-                      max-width:100%;
-                     overflow:hidden;    
-                     left: 0;
-                     right: 0;
-                     z-index:-1;
-            }
+                }

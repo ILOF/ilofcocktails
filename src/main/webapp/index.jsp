@@ -1,4 +1,3 @@
-
 <%-- 
     Document   : index
     Created on : Sep 28, 2014, 7:01:44 PM
@@ -11,16 +10,24 @@
 <!DOCTYPE html>
 <html>
             <link rel="stylesheet" type="text/css" href="Styles.css" />
-
+           <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <head>
+     
+        
+    <h4><a style = "font-family: Arial" align="left" href="login.jsp"> Login             
+            <a style="font-family: Arial" align="left"  href="register.jsp"> Register </a> </h4>
+    
+        
+        
     <div id="titlepad">
         <title>ILOFCocktails</title>
     </div>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
         <div class="header-image1">
             <img src="bannernew.jpg" class="header-image" alt="Cocktail_banner">
           
         </div>
+        
         
         <div class="title">
         <h1> ILOFCocktails</h1> 
@@ -47,8 +54,8 @@
                     <%}
                             }else{
                                 %>
-                 <a href="login.jsp">Login</a>
-                 <a href="register.jsp">Register</a>
+                 <!-- <a href="login.jsp">Login</a>
+                 <a href="register.jsp">Register</a> -->
                      
                 
                 <%
@@ -86,9 +93,5 @@
         </div>
         
     </body>
-    
-    <style>
-    
-       
-    </style>
+  
 </html>
