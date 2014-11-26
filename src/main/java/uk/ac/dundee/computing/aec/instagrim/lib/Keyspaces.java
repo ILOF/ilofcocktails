@@ -54,6 +54,7 @@ public final class Keyspaces {
             
             String CreateParties= "CREATE TABLE if not exists ilofcocktails.parties (\n"
                     + "      hostName text, \n"
+                    + "      partyName text, \n"
                     + "      date text, \n"
                     + "      guests text, \n"
                     + "      location text, \n"
