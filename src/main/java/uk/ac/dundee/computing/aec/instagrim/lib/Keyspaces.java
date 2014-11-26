@@ -60,7 +60,7 @@ public final class Keyspaces {
                     + "      location text, \n"
                     + "      cocktails text, \n"
                     + "      description text, \n"
-                    + "      PRIMARY KEY(host, date) "
+                    + "      PRIMARY KEY(hostName, date) "
                     + "  );";
             
             

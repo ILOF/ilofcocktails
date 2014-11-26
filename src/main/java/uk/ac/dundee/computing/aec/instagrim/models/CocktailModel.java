@@ -103,15 +103,13 @@ public class CocktailModel {
                         CocktailStore currentCocktail = Cocktails.get(j); 
                         if(currentCocktail.getCocktailName().toLowerCase().contains(SearchCriteria.toLowerCase())  ){
                             CocktailsReturn.add(currentCocktail);
-                        }
-                        
-               }
-               
-               return CocktailsReturn;
-
-            
+                        }                        
+               }               
+               return CocktailsReturn;            
         }
 
+        
+        
     public java.util.LinkedList<CocktailStore> SearchType(String SearchCriteria) {
         
         
