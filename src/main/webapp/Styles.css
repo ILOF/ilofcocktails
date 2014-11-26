@@ -9,10 +9,7 @@ and open the template in the editor.
 */
 
 
-nav {
-    border: 2px;
-    float: right;
-}
+
 /* form starting stylings ------------------------------- */
 .group        { 
   position:relative; 
@@ -110,15 +107,17 @@ input:valid ~ .hightlight {
  
 
     .title{
-        font-family: Arial, Helvetica, sans-seri;
+     font-family: 'Comfortaa', cursive;
      color:white;
     font-size:3.9vw;
     text-align:center;
      }
      
      nav{
+     width: 10%;
+     float: right;
      font-family: Arial, Helvetica, sans-seri;
-     margin-top: 0.5;
+     margin-top: -2%;
          
      }
      
@@ -134,36 +133,77 @@ input:valid ~ .hightlight {
 }
 
 #placeholder{
+    float: left;
+    margin-left: 15%;
+    margin-top: 10%;
+    width: 100%;
+
+}
+
+#titlepad{
+    float: left;
+    margin-top: 5%;
     width: 100%;
 
 }
 #party {
     background-color: #A621A1;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
     float: left;
-    opacity: 50%;
+    opacity: 0.4;
+    
+    font-family: 'Comfortaa', cursive;
+    color:white;
+    font-size:1.9vw;
+    text-align:center;
 }
 #search {
     background-color: #FAA419;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     margin-right: 10%;
     float: left;
-    opacity: 50%;
+    opacity: 0.4;
+    
+    font-family:'Comfortaa', cursive;
+    color:white;
+    font-size:1.9vw;
+    text-align:center;
 }
+#search123{
+    margin-bottom: auto; 
+    margin-top:    40%;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 1;
+}
+#search12{
+    margin-bottom: auto; 
+    margin-top:    35%;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 1;
+}
+
 #trending {
     background-color: #17FF45;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     margin-left: 10%;
     float: left;
-    opacity: 50%;
+    opacity: 0.4;
+    
+    font-family: 'Comfortaa', cursive;
+    color:white;
+    font-size:1.9vw;
+    text-align:center;
+       
 }
 a.fill-div {
     display: block;
@@ -172,4 +212,30 @@ a.fill-div {
     text-decoration: none;
 }
 
-
+ .header-image1{
+                            position:absolute;
+                       top:0;
+                       bottom:0;   
+                       width: 100%;
+                       height: 100%;
+                      max-height:100%;
+                      max-width:100%;
+                     overflow:hidden;    
+                     left: 0;
+                     right: 0;
+                     z-index:-1;
+                        }
+                                       
+         .header-image {
+                        position:absolute;
+                       top:0;
+                       bottom:0;   
+                       width: 100%;
+                       height: 100%;
+                      max-height:100%;
+                      max-width:100%;
+                     overflow:hidden;    
+                     left: 0;
+                     right: 0;
+                     z-index:-1;
+            }

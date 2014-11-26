@@ -71,19 +71,26 @@ testing for commit
             //java.util.LinkedList<CocktailStore> Cocktails = cm.AllCocktails();
 
             java.util.LinkedList<CocktailStore> Cocktails = (java.util.LinkedList<CocktailStore>) request.getAttribute("Cocktails");
+            java.util.LinkedList<CocktailStore> Trending = (java.util.LinkedList<CocktailStore>) request.getAttribute("Trending");
+
+            
             %>
             <p><% //out.println(Cocktails.size()); %></p>
             <%
             if (Cocktails == null) {                
         %>
-        <p>No cocktails son</p>
+        <p>Trending Cocktails</p>
         <%
         } else {
+                
+                %>
+                <a>Trending</a>
+                <%
            // Iterator<CocktailStore> iterator;
             //iterator = Cocktails.iterator();
             //while (iterator.hasNext()) {
-                for(int i = 0; i < Cocktails.size(); i++){
-                CocktailStore c = Cocktails.get(i);
+                for(int i = 0; i < Trending.size(); i++){
+                CocktailStore c = Trending.get(i);
 
         %>
         
@@ -97,6 +104,21 @@ testing for commit
         <%
 
             }
+                for(int j = 0; j < Cocktails.size(); j++){
+                       CocktailStore d = Cocktails.get(j);
+
+                 
+                       %>
+                               <div class="group">  
+             <input type="text" required readonly>
+
+        <label><% out.println(d.getCocktailName()+"   "+d.getId()); %></label><br>
+
+                                </div>
+                       <%
+                       
+                       
+                }
             }
         %>
         </article>

@@ -108,8 +108,13 @@ public class Cocktail extends HttpServlet {
         CocktailModel cm = new CocktailModel();
         cm.setCluster(cluster);
         java.util.LinkedList<CocktailStore> cocktails = cm.AllCocktails(); //=cm.getcocktails -- when ready
+        java.util.LinkedList<CocktailStore> trending = cm.ReturnTrending(); //=cm.getcocktails -- when ready
+
+        
         RequestDispatcher rd = request.getRequestDispatcher("/AllCocktails.jsp");
         request.setAttribute("Cocktails", cocktails);
+        request.setAttribute("Trending", trending);
+
         rd.forward(request, response);
 
 

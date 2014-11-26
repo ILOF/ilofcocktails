@@ -5,29 +5,29 @@
     Author     : Administrator
 --%>
 
-
+<link href='http://fonts.googleapis.com/css?family=PT+Sans|Lobster|Comfortaa:400,700|Playball' rel='stylesheet' type='text/css'>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="uk.ac.dundee.computing.aec.instagrim.stores.*" %>
 <!DOCTYPE html>
 <html>
-    
+            <link rel="stylesheet" type="text/css" href="Styles.css" />
+
     <head>
+    <div id="titlepad">
         <title>ILOFCocktails</title>
-        <link rel="stylesheet" type="text/css" href="Styles.css" />
+    </div>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    </head>
-    <body>
-         
         <div class="header-image1">
-            <img src="cocktails_banner.jpg" class="header-image" alt="Cocktail_banner">
+            <img src="bannernew.jpg" class="header-image" alt="Cocktail_banner">
           
         </div>
         
         <div class="title">
         <h1> ILOFCocktails</h1> 
         </div>
-            
-        <nav>
+    </head>
+    <body>
+                 <nav>
             <ul>
 
                
@@ -56,53 +56,39 @@
                             
                     }%>
                     
-                    <style>
-                        .header-image1{
-                            position:absolute;
-                       top:0;
-                       bottom:0;   
-                       width: 100%;
-                       height: 35%;
-                      max-height:100%;
-                      max-width:100%;
-                     overflow:hidden;    
-                     left: 0;
-                     right: 0;
-                     z-index:-1;
-                        }
-                        .header-image {
-                        position:absolute;
-                       top:0;
-                       bottom:0;   
-                       width: 100%;
-                       height: 100%;
-                      max-height:100%;
-                      max-width:100%;
-                     overflow:hidden;    
-                     left: 0;
-                     right: 0;
-                     z-index:-1;
-            }
-                        </style>
+                    
             </ul>
         </nav>
                     
                     
-                    <div id="placeholder">
-            <div id="search">
-                        <a href="/ilofcocktails/PartyDetailsInput.jsp" class="fill-div"></a>
+        <div id="placeholder">
+            
+                <div id="search">
+                     <div id="search123">
+                        <a href="/ilofcocktails/AllCocktails" class="fill-div">All Cocktails</a>
                     </div>
+                    
+            </div>  
+            
+            
             <div id="party">
-                        <a href="/ilofcocktails/PartyDetailsInput.jsp" class="fill-div"></a>
+                <div id="search12">
+                        <a href="/ilofcocktails/PartyDetailsInput.jsp" class="fill-div">Search for a cocktail</a>
                     </div>
+            </div>
+            
+            
             <div id="trending">
-                        <a href="/ilofcocktails/PartyDetailsInput.jsp" class="fill-div"></a>
+                <div id="search123">
+                        <a href="/ilofcocktails/Trending" class="fill-div">Trending</a>
                     </div>
+            </div>    
         </div>
-        <footer>
-            <ul>
-                <li>&COPY ILOFCocktails</li>
-            </ul>
-        </footer>
+        
     </body>
+    
+    <style>
+    
+       
+    </style>
 </html>
