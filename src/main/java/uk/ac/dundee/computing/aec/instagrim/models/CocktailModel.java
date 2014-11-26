@@ -180,7 +180,7 @@ public class CocktailModel {
                         } else {
 
                             for (Row row : rs) {
-                                CocktailsTop.add(""+row.getInt("cocktailid"));
+                                CocktailsTop.add(row.getString("cocktailid"));
                             
                             //System.out.println(row.getString("ingredient"));
                             } 

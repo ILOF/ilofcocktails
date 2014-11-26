@@ -41,7 +41,9 @@ import uk.ac.dundee.computing.aec.instagrim.stores.Pic;
  */
 @WebServlet(urlPatterns = {
     "/AllCocktails",
-    "/AllCocktails/*"
+    "/AllCocktails/*",
+    "/Trending",
+    "/Trending/*"
     
 })
 @MultipartConfig
@@ -61,6 +63,8 @@ public class Cocktail extends HttpServlet {
         super();
         // TODO Auto-generated constructor stub
         CommandsMap.put("AllCocktails", 1);
+                CommandsMap.put("Trending", 2);
+
        
 
     }
@@ -89,6 +93,10 @@ public class Cocktail extends HttpServlet {
                 DisplayAllCocktails(request, response);
 
                 break;
+                case 2:
+                Trending(request, response);
+
+                break;
             
             default:
                 error("Bad Operator", response);
@@ -101,6 +109,17 @@ public class Cocktail extends HttpServlet {
         cm.setCluster(cluster);
         java.util.LinkedList<CocktailStore> cocktails = cm.AllCocktails(); //=cm.getcocktails -- when ready
         RequestDispatcher rd = request.getRequestDispatcher("/AllCocktails.jsp");
+        request.setAttribute("Cocktails", cocktails);
+        rd.forward(request, response);
+
+
+    }
+    
+    private void Trending(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        CocktailModel cm = new CocktailModel();
+        cm.setCluster(cluster);
+        java.util.LinkedList<CocktailStore> cocktails = cm.ReturnTrending(); //=cm.getcocktails -- when ready
+        RequestDispatcher rd = request.getRequestDispatcher("/Trending.jsp");
         request.setAttribute("Cocktails", cocktails);
         rd.forward(request, response);
 
