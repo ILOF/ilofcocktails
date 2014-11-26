@@ -46,12 +46,13 @@
                             if (lg.getlogedin()) {
                     %>
                 <div id="horizon-nav">
-                    <h4>
-                <a href="/ilofcocktails/AllCocktails">List of all cocktails
-                <a href="/ilofcocktails/AllParties">Check the upcoming parties
-                <a href="/ilofcocktails/PartyDetailsInput.jsp">Organise a new party
-                    <a href="/ilofcocktails/Logout">Logout</a></h4>
-                    </div>
+                <ul>    
+                <li><a href="/ilofcocktails/AllCocktails">List of all cocktails</a>
+                <li><a href="/ilofcocktails/AllParties">Check the upcoming parties</a>
+                <li><a href="/ilofcocktails/PartyDetailsInput.jsp">Organise a new party</a>
+                <li><a href="/ilofcocktails/Logout">Logout</a>
+                <li>
+                </ul>    </div>
                     <%}
                             }else{
                                 %>

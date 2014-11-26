@@ -46,12 +46,14 @@
                             String UserName = lg.getUsername();
                             if (lg.getlogedin()) {
                     %>
-                    <div id="horizon-nav">
-                <h4>    <a style = "font-family: Arial" align="left" href="/ilofcocktails/AllCocktails">List of all cocktails
-                <a style = "font-family: Arial" align="left" href="/ilofcocktails/AllParties">Check the upcoming parties
-                <a style = "font-family: Arial" align="left" href="/ilofcocktails/PartyDetailsInput.jsp">Organise a new party
-                    <a style = "font-family: Arial" align="left" href="/ilofcocktails/Logout">Logout</a></h4>
-                    </div>
+                <div id="horizon-nav">
+                <ul>    
+                <li><a href="/ilofcocktails/AllCocktails">List of all cocktails</a>
+                <li><a href="/ilofcocktails/AllParties">Check the upcoming parties</a>
+                <li><a href="/ilofcocktails/PartyDetailsInput.jsp">Organise a new party</a>
+                <li><a href="/ilofcocktails/Logout">Logout</a>
+                <li>
+                </ul>    </div>
                     <%}
                             }else{
                                 %>
