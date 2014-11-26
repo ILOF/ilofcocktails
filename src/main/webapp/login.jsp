@@ -45,12 +45,13 @@
                             String UserName = lg.getUsername();
                             if (lg.getlogedin()) {
                     %>
-
-                <li><a href="/ilofcocktails/Images/<%=lg.getUsername()%>">Your Images</a></li>
-                <li><a href="/ilofcocktails/AllCocktails">List of all cocktails</a></li>
-                <li><a href="/ilofcocktails/AllParties">Check the upcoming parties</a></li>
-                <li><a href="/ilofcocktails/PartyDetailsInput.jsp">Organise a new party</a></li>
-                <li><a href="/ilofcocktails/Logout">Logout</a></li>
+                <div id="horizon-nav">
+                    <h4>
+                <a href="/ilofcocktails/AllCocktails">List of all cocktails
+                <a href="/ilofcocktails/AllParties">Check the upcoming parties
+                <a href="/ilofcocktails/PartyDetailsInput.jsp">Organise a new party
+                    <a href="/ilofcocktails/Logout">Logout</a></h4>
+                    </div>
                     <%}
                             }else{
                                 %>
@@ -83,18 +84,20 @@
                             
                             <labelusername> Username</labelusername> 
                       <!--   <input type="text" value="Login">-->
+                      
+                       <input id="input1" type="submit" name="Register" class="button2" >
                     </form>
 
 
                     </div>
-                    
+            
             </div>
         </div>
             
             <div id="registercircle">
                <div id="registerform">
                    
-                    <form method="POST"  action="Login">
+                    <form method="POST"  action="Register">
                         <div class="group">
                        
                             <input type="text" name="username"> <br> 
@@ -105,11 +108,13 @@
                              
                             <input type="password" name="password"><br> 
                           
-                            <labelpassword>Password</labelpassword>
+                            <labelpasswordr2>Password</labelpasswordr2>
                             
                              <input type="password" name="password">
                       
-                             <labelpasswordr>Password</labelpasswordr> 
+                             <labelpasswordr>Password</labelpasswordr> <br>
+                             
+                             <input id="input1" type="submit" name="Register" class="button" >
                       
                           
                             

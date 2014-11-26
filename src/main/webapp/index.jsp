@@ -1,3 +1,4 @@
+
 <%-- 
     Document   : index
     Created on : Sep 28, 2014, 7:01:44 PM
@@ -45,12 +46,12 @@
                             String UserName = lg.getUsername();
                             if (lg.getlogedin()) {
                     %>
-
-                <li><a href="/ilofcocktails/Images/<%=lg.getUsername()%>">Your Images</a></li>
-                <li><a href="/ilofcocktails/AllCocktails">List of all cocktails</a></li>
-                <li><a href="/ilofcocktails/AllParties">Check the upcoming parties</a></li>
-                <li><a href="/ilofcocktails/PartyDetailsInput.jsp">Organise a new party</a></li>
-                <li><a href="/ilofcocktails/Logout">Logout</a></li>
+                    <div id="horizon-nav">
+                <h4>    <a style = "font-family: Arial" align="left" href="/ilofcocktails/AllCocktails">List of all cocktails
+                <a style = "font-family: Arial" align="left" href="/ilofcocktails/AllParties">Check the upcoming parties
+                <a style = "font-family: Arial" align="left" href="/ilofcocktails/PartyDetailsInput.jsp">Organise a new party
+                    <a style = "font-family: Arial" align="left" href="/ilofcocktails/Logout">Logout</a></h4>
+                    </div>
                     <%}
                             }else{
                                 %>
