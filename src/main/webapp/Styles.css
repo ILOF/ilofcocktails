@@ -10,7 +10,6 @@ and open the template in the editor.
 
 
 nav {
-    text-align: left;
     border: 2px;
     float: right;
 }
@@ -104,4 +103,36 @@ input:valid ~ .hightlight {
 	from { background:#4fc24f !important; }
   to 	{ width:0; background:transparent; }
 }
+
+
+            body {background-color:black;}
+            
+ 
+
+    .title{
+        font-family: Arial, Helvetica, sans-seri;
+     color:white;
+    font-size:3.9vw;
+    text-align:center;
+     }
+     
+     nav{
+     font-family: Arial, Helvetica, sans-seri;
+     margin-top: 0.5;
+         
+     }
+     
+     a:link {
+    color:#FFFFFF;
+    background-color:transparent;
+    text-decoration:none;
+}
+   a:visited {
+    color:#FFFFFF;
+    background-color:transparent;
+    text-decoration:none;
+}
+
+
+
 

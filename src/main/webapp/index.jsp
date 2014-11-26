@@ -10,21 +10,27 @@
 <%@page import="uk.ac.dundee.computing.aec.instagrim.stores.*" %>
 <!DOCTYPE html>
 <html>
+    
     <head>
-        <title>Instagrim</title>
+        <title>ILOFCocktails</title>
         <link rel="stylesheet" type="text/css" href="Styles.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
-        <header>
-            <h1><center>InstaGrim ! </center></h1>
-        	<h2><center>Your world in Black and White</center></h2>        
-        </header>
+         
+        <div class="header-image1">
+            <img src="cocktails_banner.jpg" class="header-image" alt="Cocktail_banner">
+          
+        </div>
+        
+        <div class="title">
+        <h1> ILOFCocktails</h1> 
+        </div>
+            
         <nav>
             <ul>
 
                
-                <li><a href="upload.jsp">Upload</a></li>
                     <%
                         
                         LoggedIn lg = (LoggedIn) session.getAttribute("LoggedIn");
@@ -41,18 +47,48 @@
                     <%}
                             }else{
                                 %>
-                 <li><a href="register.jsp">Register</a></li>
-                <li><a href="login.jsp">Login</a></li>
+                 <a href="login.jsp">Login</a>
+                 <a href="register.jsp">Register</a>
+                     
+                
                 <%
                                         
                             
                     }%>
+                    
+                    <style>
+                        .header-image1{
+                            position:absolute;
+                       top:0;
+                       bottom:0;   
+                       width: 100%;
+                       height: 35%;
+                      max-height:100%;
+                      max-width:100%;
+                     overflow:hidden;    
+                     left: 0;
+                     right: 0;
+                     z-index:-1;
+                        }
+                        .header-image {
+                        position:absolute;
+                       top:0;
+                       bottom:0;   
+                       width: 100%;
+                       height: 100%;
+                      max-height:100%;
+                      max-width:100%;
+                     overflow:hidden;    
+                     left: 0;
+                     right: 0;
+                     z-index:-1;
+            }
+                        </style>
             </ul>
         </nav>
         <footer>
             <ul>
-                <li class="footer"><a href="/Instagrim">Home</a></li>
-                <li>&COPY; Konstantin I.</li>
+                <li>&COPY ILOFCocktails</li>
             </ul>
         </footer>
     </body>
