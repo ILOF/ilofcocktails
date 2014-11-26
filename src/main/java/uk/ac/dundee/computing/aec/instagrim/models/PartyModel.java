@@ -65,7 +65,7 @@ public class PartyModel {
                 ));
         if (rs.isExhausted()) {
             System.out.println("No parties.");
-            return null;
+            //return null;
         } else {
             for (Row row : rs) {
                 PartyStore prt = new PartyStore();
@@ -73,18 +73,18 @@ public class PartyModel {
                 prt.setDate(row.getString("date"));
                 prt.setDescription(row.getString("description"));
                 prt.setGuests(row.getString("guests"));
-                prt.setHostName(row.getString("hostName"));
-                prt.setPartyName(row.getString("partyName"));
+                prt.setHostName(row.getString("hostname"));
+                prt.setPartyName(row.getString("partyname"));
                 prt.setLocation(row.getString("location"));
                 
                 Parties.add(prt);
-            }
+            } 
         } 
         return Parties;
     }
     
     
-    
+        
         public java.util.LinkedList<PartyStore> SearchNames(String SearchCriteria) {
                java.util.LinkedList<PartyStore> Parties = AllParties();
                java.util.LinkedList<PartyStore> PartiesReturn = new java.util.LinkedList<>();
@@ -93,8 +93,8 @@ public class PartyModel {
                         if(currentParty.getPartyName().toLowerCase().contains(SearchCriteria.toLowerCase())  ){
                             PartiesReturn.add(currentParty);
                         }                        
-               }
-               return PartiesReturn;
+               }               
+               return PartiesReturn;            
         }
     
         

@@ -17,7 +17,7 @@
        
         <article>
             <h3>Add New Party Details</h3>
-            <form method="POST"  action="Party">
+            <form method="POST"  action="AddParty">
                 <ul>
                     <li>Party Name: <input type="text" name="partyName"></li>
                     <li>Host Name: <input type="text" name="hostName"></li>
@@ -25,10 +25,8 @@
                     <li>Location: <input type="text" name="location"></li>
                     <li>Theme/Description: <input type="text" name="description"></li>
                     <li>Preferable cocktails (separated by commas): <input type="text" name="cocktails"></li>                    
-                    <li>List of guests (separated by commas): <input type="text" name="guests"></li>
-                    
-                    
-                </ul>
+                    <li>List of guests (separated by commas): <input type="text" name="guests"></li>                
+                    </ul>
                 <br/>
                 <input type="submit" value="Add Party"> 
             </form>
