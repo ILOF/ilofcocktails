@@ -17,13 +17,12 @@ public final class Keyspaces {
             String createkeyspace = "create keyspace if not exists ilofcocktails  WITH replication = {'class':'SimpleStrategy', 'replication_factor':1}";
             
             String CreateCocktailsTable = "CREATE TABLE if not exists ilofcocktails.cocktails (\n"
-                    + "      drinkid text,\n"
+                    + "      drinkid int,\n"
                     + "      name text,\n"
                     + "      type text,\n"
                     + "      glass text,\n"
                     + "      garnish text,\n"
-                    + "      occasion text,\n"
-                    + "      ingredients text,\n"
+                    + "      ocasion text,\n"
                     + "      soi1 text,\n"
                     + "      soi2 text,\n"
                     + "      soi3 text,\n"

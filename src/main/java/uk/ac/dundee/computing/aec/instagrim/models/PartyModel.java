@@ -78,7 +78,7 @@ public class PartyModel {
                 prt.setLocation(row.getString("location"));
                 
                 Parties.add(prt);
-            }
+            } 
         } 
         return Parties;
     }
