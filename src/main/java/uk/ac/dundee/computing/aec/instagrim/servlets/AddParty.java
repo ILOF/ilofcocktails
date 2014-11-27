@@ -43,7 +43,7 @@ public class AddParty extends HttpServlet {
                 CocktailModel cm = new CocktailModel();
                 pm.setCluster(cluster);
                 cm.setCluster(cluster);
-                               String[] Names = request.getParameter("cocktails").split(",");
+                               String[] Names = request.getParameter("cocktails").split(", ");
                                String test = "";
                                for (int i = 0; i< Names.length; i++){
                                    test = test+cm.idname(Names[i]);

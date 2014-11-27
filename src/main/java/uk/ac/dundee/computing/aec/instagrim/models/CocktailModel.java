@@ -113,7 +113,7 @@ public class CocktailModel {
                          java.util.LinkedList<CocktailStore> Cocktails = AllCocktails();
                          for (int i = 0; i< Cocktails.size(); i++){
                              CocktailStore cs = Cocktails.get(i);
-                             if(cs.getCocktailName().toLowerCase().equals(SearchCriteria.toLowerCase())){
+                             if(cs.getCocktailName().toLowerCase().contains(SearchCriteria.toLowerCase())){
                               ID =  ""+cs.getId();
                              //ID = Cocktails.get(i).getId();
                          }else{
