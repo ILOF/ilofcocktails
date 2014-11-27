@@ -106,28 +106,17 @@
                                
                               <input type="text" name="email">  <br> 
                              <labelemailr>Email</labelemailr>
+                                                         
+                             <input type="password" name="password">                      
+                             <labelpasswordr>Password</labelpasswordr> <br>                             
                              
-                            <input type="password" name="password"><br> 
-                          
-                            <labelpasswordr2>Password</labelpasswordr2>
-                            
-                             <input type="password" name="password">
-                      
-                             <labelpasswordr>Password</labelpasswordr> <br>
+                            <input type="password" name="password2"><br>                           
+                            <labelpasswordr2>Repeat Your Password</labelpasswordr2>
                              
                              <input id="input1" type="submit" name="Register" class="button" >
                       
-                          
-                            
-                           
                            <!--   <span class="bar"></span> -->
-                             <!--   <span class="bar"></span> -->
-                          
-                      
-                      
-                      
-                      
-                      
+                             <!--   <span class="bar"></span> -->                                                
                     </form>
 
 

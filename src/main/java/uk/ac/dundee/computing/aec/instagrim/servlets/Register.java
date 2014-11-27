@@ -50,27 +50,40 @@ public class Register extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
+                String password2 = request.getParameter("password2");
 
-		if (registrationError(username, password) == false) {	//  if details are > 2 symbols each - OK
+		// ensure the password is correct - 2nd field for a pass:
+		String repeatPassword = request.getParameter("repeatPassword");
 
-			User us = new User();
-			us.setCluster(cluster);
-			//us.RegisterUser(username, password);						
-			//response.sendRedirect("/ilofcocktails");				
+		// get the user to put their real names when registering -- NOT YET IMPLEMENTED
+		String firstName = request.getParameter("firstName");
+		String lastName = request.getParameter("lastName");
+
+		if (password.equals(password2)) {
 			
-			boolean checkRegistration = us.RegisterUser(username, password);                                 
-            
-            if (checkRegistration == false){    // if the name is taken = fail        	
-            	response.sendRedirect("errorUsernameTaken.jsp");            	
-            }
-            else{
-                response.sendRedirect("/ilofcocktails");
-            }
-		} else {
-			response.sendRedirect("errorUserPassLength.jsp");
+			// if details are > 2 symbols each - OK:
+			if (registrationError(username, password) == false) {
+
+				User us = new User();
+				us.setCluster(cluster);
+				// us.RegisterUser(username, password);
+				// response.sendRedirect("/Instagrim");
+
+				boolean checkRegistration = us.RegisterUser(username, password);
+
+				if (checkRegistration == false) { // if the name is taken = fail
+					response.sendRedirect("errorUsernameTaken.jsp");
+				} else {	// if everything OK go back to the index
+					response.sendRedirect("/ilofcocktails");
+				}
+			} else {	// if user/pass are too short display an error
+				response.sendRedirect("errorUserPassLength.jsp");
+			}
+
+		} else {	// if passwords don't match display an error
+			response.sendRedirect("errorPasswordsNotMatch.jsp");
 		}
-		
-		
+
 	}
 
 	/**
@@ -83,16 +96,13 @@ public class Register extends HttpServlet {
 		return "Short description";
 	}// </editor-fold>
 
-	
 	// OBSOLETE UNLESS CHANGED ABOVE TO USE IT
 	// username and password cannot be less than 2 symbols each
 	public boolean registrationError(String user, String pass) {
 		if (user.length() < 2 || pass.length() < 2) {
-			return true;	// there is an error while registering 
+			return true; // there is an error while registering
 		} else
-			return false;	// registration details are fine
+			return false; // registration details are fine
 	}
 
-
-	
 }
