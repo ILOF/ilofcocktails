@@ -28,18 +28,7 @@ testing for commit
         <h2>Look up parties</h2>
         </header>
  
-     
-        
-        <form method="POST" action="/ilofcocktails/SearchParty">            
-                        <div class="group">  
-            <input type="text" required name = "searchCriteria">
-            <span class="bar"></span>
-                                    <span class="highlight"></span>
-            <label> Search by Party Name: </label>
-            
-       <%--   <input type="submit" value="Search"> <br><br> --%>      
-              </div>
-                    </form>         
+             
 
        
     
@@ -52,7 +41,7 @@ testing for commit
             pm.setCluster(cluster);
             //java.util.LinkedList<PartyStore> Cocktails = pm.AllParties();
 
-            java.util.LinkedList<PartyStore> Parties = (java.util.LinkedList<PartyStore>) request.getAttribute("Parties");
+            java.util.LinkedList<PartyStore> Parties = (java.util.LinkedList<PartyStore>) request.getAttribute("Party");
             %>
             <p><% //=out.println(Parties.size()); %></p>
             <%
@@ -72,36 +61,13 @@ testing for commit
                                 <div class="group">  
              <input type="text" required readonly>
 
-        
-        <label><% out.println(p.getPartyName() + " hosted by " + p.getHostName() + " on " + p.getDate()); %></label>
-            
-        
-        
-        
-        
-        
-        <!-- Check the details:               -->
-        <form method="POST"  action="selectedParty">
-                <ul>
-                    <input  type="text" name="hostName" value = <% out.println(p.getHostName()); %>   >
-                    <input  type="text" name="date"     value = <% out.println(p.getDate());     %>  >
-                </ul>
-                <br/>
-                <input type="submit" value="Check Details"> 
-            </form>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
+        <label><% out.println(p.getPartyName() + " hosted by " + p.getHostName() + " on " + p.getDate()); %></label><br>
+        <label><% out.println("Location: " + p.getLocation() ); %></label><br>        
+        <label><% out.println("Party description/theme: " + p.getDescription() ); %></label><br>
+        <label><% out.println(); %></label><br>
+        <label><% out.println("Preferred cocktails: " + p.getCocktails() ); %></label><br>
+        <label><% out.println("Guests: " + p.getGuests()); %></label><br>
+
                                 </div>
         
         <%

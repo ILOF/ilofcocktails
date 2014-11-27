@@ -84,6 +84,51 @@ public class PartyModel {
     }
     
     
+    
+    public java.util.LinkedList<PartyStore> singleParty(String hostName, String date) {
+               java.util.LinkedList<PartyStore> Parties = AllParties();
+               java.util.LinkedList<PartyStore> PartiesReturn = new java.util.LinkedList<>();
+               for (int j = 0; j < Parties.size(); j++) {
+                        PartyStore currentParty = Parties.get(j); 
+                        if(currentParty.getHostName().toLowerCase().contains(hostName.toLowerCase()) && currentParty.getDate().contains(date)) {
+                            PartiesReturn.add(currentParty);
+                        }                        
+               }               
+               return PartiesReturn;            
+        }
+    
+    
+    /*
+    public java.util.LinkedList<PartyStore> singleParty(String hostName, String date) {
+        java.util.LinkedList<PartyStore> Party = new java.util.LinkedList<>();
+        Session session = cluster.connect("ilofcocktails");
+        PreparedStatement ps = session.prepare("select * from parties where hostName=? and date=?");
+        ResultSet rs = null;
+        
+        BoundStatement boundStatement = new BoundStatement(ps);
+        rs = session.execute( boundStatement.bind(hostName, date));
+        
+        if (rs.isExhausted()) {
+            System.out.println("No parties.");
+            //return null;
+        } else {
+            for (Row row : rs) {
+                PartyStore prt = new PartyStore();
+                prt.setCocktails(row.getString("cocktails"));
+                prt.setDate(row.getString("date"));
+                prt.setDescription(row.getString("description"));
+                prt.setGuests(row.getString("guests"));
+                prt.setHostName(row.getString("hostname"));
+                prt.setPartyName(row.getString("partyname"));
+                prt.setLocation(row.getString("location"));
+                
+                Party.add(prt);
+            } 
+        } 
+        return Party;
+    }
+    */
+    
         
         public java.util.LinkedList<PartyStore> SearchNames(String SearchCriteria) {
                java.util.LinkedList<PartyStore> Parties = AllParties();
