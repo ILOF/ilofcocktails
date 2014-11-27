@@ -5,7 +5,7 @@
 
 testing for commit
 --%>
-
+<link href='http://fonts.googleapis.com/css?family=PT+Sans|Lobster|Comfortaa:400,700|Playball' rel='stylesheet' type='text/css'>
 <%@page import="uk.ac.dundee.computing.aec.instagrim.stores.CocktailStore"%>
 <%@page import="uk.ac.dundee.computing.aec.instagrim.lib.CassandraHosts"%>
 <%@page import="com.datastax.driver.core.Cluster"%>
@@ -19,20 +19,50 @@ testing for commit
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>ilofcocktails</title>
         <link rel="stylesheet" type="text/css" href="/ilofcocktails/Styles.css" />
+       
+       <div class="titleCocktail">
+        <h1> ILOFCocktails</h1> 
+        </div>
+            
+            <div class="header-image1">
+                   <img src="bannerbanner.png">
+            </div>
+        </div>
+
     </head>
-    <body>
-        <header>
-        
-        <h1>ILOFCocktails</h1>
-      
-        </header>
-        <nav>
-            <ul>
-                <li class="nav"><a href="/ilofcocktails/upload.jsp">Upload</a></li>
-                <li class="nav"><a href="/ilofcocktails/Images/majed">Sample Images</a></li>
-            </ul>
-        </nav>
+    
+    
  
+                    
+    <body>
+               <%
+                        
+                        LoggedIn lge = (LoggedIn) session.getAttribute("LoggedIn");
+                        if (lge != null) {
+                            String UserName = lge.getUsername();
+                            if (lge.getlogedin()) {
+                    %>
+                <div id="horizon-nav">
+                <ul id="navlist">    
+                <li><a href="/ilofcocktails/AllCocktails">List of all cocktails</a>
+                 <li><a href="/ilofcocktails/Trending.jsp">Trending</a>
+                <li><a href="/ilofcocktails/AllParties">Check the upcoming parties</a>
+                <li><a href="/ilofcocktails/PartyDetailsInput.jsp">Organise a new party</a>
+                <li><a href="/ilofcocktails/Logout">Logout</a>
+                </ul>    </div>
+                    <%}
+                            }else{
+                                %>
+                <div id="horizon-nav">
+                <ul id="navlist">    
+                <li><a href="/ilofcocktails/">Home</a>
+                <li><a href="/ilofcocktails/AllCocktails">List of all cocktails</a>
+                <li><a href="/ilofcocktails/Trending.jsp">Trending</a>
+                <li><a href="login.jsp"> Login/Register             
+                </ul>    </div>
+                <%
+                                                 
+                    }%>
      
         <div id ="searchbar"
         <form method="POST" action="/ilofcocktails/SearchCocktail">
@@ -53,12 +83,6 @@ testing for commit
                     </form>         
 
     </div>
-    
-    
-    
-    
-   
-   
         
         <article>
         
