@@ -15,10 +15,22 @@
            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <head>
      
-        
+        <%
+                        
+                        LoggedIn lg = (LoggedIn) session.getAttribute("LoggedIn");
+                        if (lg != null) {
+                            String UserName = lg.getUsername();
+                            if (lg.getlogedin()) {
+                    %>
+                    <%}
+                            }else{
+                                %>
     <h4><a style = "font-family: Arial" align="left" href="login.jsp"> Login             
             <a style="font-family: Arial" align="left"  href="register.jsp"> Register </a> </h4>
-    
+    <%
+                                        
+                            
+                    }%>
         
         
     <div id="titlepad">
@@ -43,14 +55,15 @@
                
                     <%
                         
-                        LoggedIn lg = (LoggedIn) session.getAttribute("LoggedIn");
-                        if (lg != null) {
-                            String UserName = lg.getUsername();
-                            if (lg.getlogedin()) {
+                        LoggedIn lge = (LoggedIn) session.getAttribute("LoggedIn");
+                        if (lge != null) {
+                            String UserName = lge.getUsername();
+                            if (lge.getlogedin()) {
                     %>
                 <div id="horizon-nav">
                 <ul id="navlist">    
                 <li><a href="/ilofcocktails/AllCocktails">List of all cocktails</a>
+                <li><a href="/ilofcocktails/Trending.jsp">Trending</a>
                 <li><a href="/ilofcocktails/AllParties">Check the upcoming parties</a>
                 <li><a href="/ilofcocktails/PartyDetailsInput.jsp">Organise a new party</a>
                 <li><a href="/ilofcocktails/Logout">Logout</a>

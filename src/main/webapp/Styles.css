@@ -82,8 +82,8 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
 /* active state */
 input:focus ~ label, input:valid ~ label     {
   top:-20px;
-  font-size:14px;
-  color:#5264AE;
+  font-size:16px;
+  color:#ffffff;
 }
 
 
@@ -137,6 +137,16 @@ input:valid ~ .hightlight {
      text-align:center;
      }
      
+     
+     .titleCocktail{
+     margin-top: 6%;
+     margin-bottom:1%;
+     font-family: 'Comfortaa', cursive;
+     color:white;
+     font-size:1.5vw;
+     text-align:center;
+     }
+     
      nav{
      width: 10%;
      float: right;
@@ -156,16 +166,17 @@ input:valid ~ .hightlight {
     text-decoration:none;
 }
 
-#placeholder{
+
+
+#placeholder2{
     float: left;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
+    margin-left: 90%;
+    margin-top: 90%;
     width: 100%;
 
 }
 
-#placeholder2{
+#placeholderAllCocktails{
     float: left;
     margin-left: 90%;
     margin-top: 90%;
@@ -178,22 +189,14 @@ input:valid ~ .hightlight {
     width: 100%;
 
 }
-#party {
-    background-color: #8E44AD;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    margin-left: auto;
-    margin-right: auto;
-     margin-top: 3%;
+
+#titleCocktail{
     float: left;
-    opacity: 0.85;
-    
-    font-family: 'Comfortaa', cursive;
-    color:white;
-    font-size:1.9vw;
-    text-align:center;
+    margin-top: 5%;
+    width: 100%;
+
 }
+
 #loginCircle {
     background-color: #2980b9;
     width: 500px;
@@ -338,6 +341,14 @@ labelpasswordr2       {
      text-align: center;
      
 }
+#placeholder{
+    float: left;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: auto;
+    width: 80%;
+
+}
 #search {
     background-color: #E67E22;
     width: 300px;
@@ -354,11 +365,46 @@ labelpasswordr2       {
     font-size:1.9vw;
     text-align:center;
 }
+#party {
+    background-color: #8E44AD;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+     margin-top: 3%;
+    float: left;
+    opacity: 0.85;
+    
+    font-family: 'Comfortaa', cursive;
+    color:white;
+    font-size:1.9vw;
+    text-align:center;
+}
+#trending {
+    background-color: #27AE60;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-left: 10%;
+    margin-right: 10%;
+     margin-top: 3%;
+    float: left;
+    opacity: 0.85;
+    
+    font-family: 'Comfortaa', cursive;
+    color:white;
+    font-size:1.9vw;
+    text-align:center;
+       
+}
+
+
 #search123{
     margin-bottom: auto; 
     margin-top:    40%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 10%;
+    margin-right: 10%;
     opacity: 1;
 }
 #search12{
@@ -385,22 +431,7 @@ labelpasswordr2       {
     opacity: 1;
 }
 
-#trending {
-    background-color: #27AE60;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    margin-left: 10%;
-     margin-top: 3%;
-    float: left;
-    opacity: 0.85;
-    
-    font-family: 'Comfortaa', cursive;
-    color:white;
-    font-size:1.9vw;
-    text-align:center;
-       
-}
+
 a.fill-div {
     display: block;
     height: 100%;
@@ -423,12 +454,15 @@ a.fill-div {
                 }
                 #horizon-nav ul{
                     padding: .2em 0;
-                    margin: 0;
+                    margin-top: 3%;
                     list-style-type: none;
-                    
+                
                     color: #FFF;
                     width: 100%;
-                    font: bold 90% arial, helvetica, sans-serif;
+                    font-family: 'Comfortaa', cursive;
+                    font-weight: bold;
+                    color:white;
+                    font-size:1.2vw;
                     text-align: center;
                 }            
                 li{
@@ -436,13 +470,14 @@ a.fill-div {
                 }
                 li a{
                     text-decoration: none;
-                    
+                    margin: 0;
                     color: #FFF;
                     padding: .2em 1em;
-                    border-left: 1px solid #FFF;
-                    border-right: 1px solid #FFF;
+                    //border-left: 1px solid #FFF;
+                    //border-right: 1px solid #FFF;
                 }
                 li a:hover{
                     
                     color: #FFF;
                 }
+                
