@@ -46,9 +46,9 @@ public class ListCheck extends HttpServlet {
                 cm.setCluster(cluster);
                 java.util.LinkedList<String> Drinks = new java.util.LinkedList<>();
                 java.util.LinkedList<String> ingredientsHad = new java.util.LinkedList<>();
-                Drinks.add("247");
-                Drinks.add("619");
-                ingredientsHad.add("random");
+                Drinks.add("13");
+                Drinks.add("12");
+                ingredientsHad.add("");
 
                 ListStore List = cm.ReturnShopping(ingredientsHad, Drinks);
                 RequestDispatcher rd = request.getRequestDispatcher("/ShowList.jsp");

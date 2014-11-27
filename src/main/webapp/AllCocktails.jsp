@@ -23,10 +23,9 @@ testing for commit
     <body>
         <header>
         
-        <h1>ILOFCocktails ! </h1>
-        <h2></h2>
+        <h1>ILOFCocktails</h1>
+      
         </header>
-        
         <nav>
             <ul>
                 <li class="nav"><a href="/ilofcocktails/upload.jsp">Upload</a></li>
@@ -35,7 +34,7 @@ testing for commit
         </nav>
  
      
-        
+        <div id ="searchbar"
         <form method="POST" action="/ilofcocktails/SearchCocktail">
             
                         <div class="group">  
@@ -53,7 +52,7 @@ testing for commit
 
                     </form>         
 
-    
+    </div>
     
     
     
