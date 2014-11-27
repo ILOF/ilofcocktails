@@ -14,7 +14,7 @@
      </header>
         
          <h1>InstaGrim Error </h1>  <br>
-         <h3>Username taken. Please choose another one. <br><br> Redirecting...</h3>      
+         <h3>Someone already has that username. Please try again and choose a new username. <br><br> Redirecting...</h3>      
         
          
 
