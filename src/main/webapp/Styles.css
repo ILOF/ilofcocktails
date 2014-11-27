@@ -12,96 +12,96 @@ and open the template in the editor.
 
 /* form starting stylings ------------------------------- */
 .group        { 
-  position:relative; 
-  margin-bottom:45px; 
+    position:relative; 
+    margin-bottom:45px; 
 }
 
 input         {
     background-color: #2980b9;
- font-size:18px;
-  padding:10px 10px 10px 5px;
-  display:block;
-  width:300px;
-  border:none;
-  border-bottom:1px solid #000000;
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:300px;
+    border:none;
+    border-bottom:1px solid #000000;
 }
 #r {
-    
-        background-color: #c0392b;
 
-    
-    
-    
+    background-color: #c0392b;
+
+
+
+
 }
 
 #input1{
     font-size:18px;
-  padding:10px 10px 10px 5px;
-  display:block;
-  width:20%;
-  border:none;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:20%;
+    border:none;
 }
 
 input:focus     { outline:none; }
 
 /* LABEL ======================================= */
 label          {
-      font-family: "Arial", Helvetica, sans-serif	;
+    font-family: "Arial", Helvetica, sans-serif	;
 
-  color:#999; 
-  font-size:18px;
-  font-weight:lighter;
-  position:absolute;
-  pointer-events:none;
-  left:5px;
-  top:10px;
-  transition:0.2s ease all; 
+    color:#999; 
+    font-size:18px;
+    font-weight:lighter;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all; 
 }
 /* BOTTOM BARS ================================= */
 .bar  { position:relative; display:block; width:320px; }
 .bar:before, .bar:after   {
-  content:'';
-  height:2px; 
-  width:0;
-  bottom:1px; 
-  position:absolute;
-  background:#5264AE; 
-  transition:0.2s ease all; 
+    content:'';
+    height:2px; 
+    width:0;
+    bottom:1px; 
+    position:absolute;
+    background:#5264AE; 
+    transition:0.2s ease all; 
 }
 .bar:before {
-  left:50%;
+    left:50%;
 }
 .bar:after {
-  right:50%; 
+    right:50%; 
 }
 
 /* active state */
 input:focus ~ .bar:before, input:focus ~ .bar:after {
-  width:50%;
+    width:50%;
 }
 
 /* active state */
 input:focus ~ label, input:valid ~ label     {
-  top:-20px;
-  font-size:16px;
-  color:#ffffff;
+    top:-20px;
+    font-size:16px;
+    color:#ffffff;
 }
 
 
 
 /* HIGHLIGHTER ================================== */
 .highlight {
-  position:absolute;
-  height:60%; 
-  width:100px; 
-  top:25%; 
-  left:0;
-  pointer-events:none;
-  opacity:0.5;
+    position:absolute;
+    height:60%; 
+    width:100px; 
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
 }
 
 input:focus ~ .highlight {
-  -webkit-animation:inputHighlighter 0.3s ease;
+    -webkit-animation:inputHighlighter 0.3s ease;
 }
 
 input:valid ~ .hightlight {
@@ -110,58 +110,58 @@ input:valid ~ .hightlight {
 
 /* ANIMATIONS ================ */
 @-webkit-keyframes inputHighlighter {
-	from { background:#5264AE; }
-  to 	{ width:0; background:transparent; }
+    from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
 }
 
 @-webkit-keyframes validHighlighter {
-	from { background:#4fc24f !important; }
-  to 	{ width:0; background:transparent; }
+    from { background:#4fc24f !important; }
+    to 	{ width:0; background:transparent; }
 }
 
 
-            body {background-color:black;
-            
-            
-            
-            
-            
-            
-            }
-            
- 
+body {background-color:black;
 
-    .title{
-     font-family: 'Comfortaa', cursive;
-     color:white;
-     font-size:3.9vw;
-     text-align:center;
-     }
-     
-     
-     .titleCocktail{
-     margin-top: 6%;
-     margin-bottom:1%;
-     font-family: 'Comfortaa', cursive;
-     color:white;
-     font-size:1.5vw;
-     text-align:center;
-     }
-     
-     nav{
-     width: 10%;
-     float: right;
-     font-family: Arial, Helvetica, sans-serif;
-     margin-top: -2%;
-         
-     }
-     
-     a:link {
+
+
+
+
+
+}
+
+
+
+.title{
+    font-family: 'Comfortaa', cursive;
+    color:white;
+    font-size:3.9vw;
+    text-align:center;
+}
+
+
+.titleCocktail{
+    margin-top: 6%;
+    margin-bottom:1%;
+    font-family: 'Comfortaa', cursive;
+    color:white;
+    font-size:1.5vw;
+    text-align:center;
+}
+
+nav{
+    width: 10%;
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: -2%;
+
+}
+
+a:link {
     color:#FFFFFF;
     background-color:transparent;
     text-decoration:none;
 }
-   a:visited {
+a:visited {
     color:#FFFFFF;
     background-color:transparent;
     text-decoration:none;
@@ -207,7 +207,7 @@ input:valid ~ .hightlight {
     margin-right: auto;
     float: left;
     opacity: 0.85;
-    
+
     font-family: 'Comfortaa', cursive;
     color:white;
     font-size:1.9vw;
@@ -222,125 +222,125 @@ input:valid ~ .hightlight {
     margin-right: auto;
     float: left;
     opacity: 0.95;
-    
+
     font-family: 'Comfortaa', cursive;
     color:white;
     font-size:1.9vw;
     text-align:center;
 }
 labelpassword          {
-      font-family: "Arial", Helvetica, sans-serif	;
+    font-family: "Arial", Helvetica, sans-serif	;
 
-  color:#000000; 
-  font-size:18px;
-  font-weight:lighter;
-  position:absolute;
-  pointer-events:none;
-  left:26%;
-  top:28%;
-  transition:0.2s ease all; 
+    color:#000000; 
+    font-size:18px;
+    font-weight:lighter;
+    position:absolute;
+    pointer-events:none;
+    left:26%;
+    top:28%;
+    transition:0.2s ease all; 
 }
 
 labelusername          {
-      font-family: "Arial", Helvetica, sans-serif	;
+    font-family: "Arial", Helvetica, sans-serif	;
 
-  color:#000000; 
-  font-size:18px;
-  font-weight:lighter;
-  position:absolute;
-  pointer-events:none;
-  left:26%;
-  top: -15% ;
-  transition:0.2s ease all; 
+    color:#000000; 
+    font-size:18px;
+    font-weight:lighter;
+    position:absolute;
+    pointer-events:none;
+    left:26%;
+    top: -15% ;
+    transition:0.2s ease all; 
 }
 
 labelusernameregister          {
-      font-family: "Arial", Helvetica, sans-serif	;
- text-align: center;
-  color:#000000; 
-  font-size:18px;
-  font-weight:lighter;
-  position:absolute;
-  pointer-events:none;
-  left: 22%;
-  top: -7% ;
-  transition:0.2s ease all; 
+    font-family: "Arial", Helvetica, sans-serif	;
+    text-align: center;
+    color:#000000; 
+    font-size:18px;
+    font-weight:lighter;
+    position:absolute;
+    pointer-events:none;
+    left: 22%;
+    top: -7% ;
+    transition:0.2s ease all; 
 }
 
 labelemailr       {
-      font-family: "Arial", Helvetica, sans-serif	;
+    font-family: "Arial", Helvetica, sans-serif	;
 
-  color:#000000;
-  text-align: center;
-  font-size:18px;
-  font-weight:lighter;
-  position:absolute;
-  pointer-events:none;
-  left:26%;
-  top: 15% ;
-  transition:0.2s ease all; 
+    color:#000000;
+    text-align: center;
+    font-size:18px;
+    font-weight:lighter;
+    position:absolute;
+    pointer-events:none;
+    left:26%;
+    top: 15% ;
+    transition:0.2s ease all; 
 }
 
 labelpasswordr       {
-      font-family: "Arial", Helvetica, sans-serif	;
+    font-family: "Arial", Helvetica, sans-serif	;
 
-  color:#000000; 
-  font-size:18px;
-  font-weight:lighter;
-  position:absolute;
-  pointer-events:none;
-  left:26%;
-  top: 40% ;
-  transition:0.2s ease all; 
+    color:#000000; 
+    font-size:18px;
+    font-weight:lighter;
+    position:absolute;
+    pointer-events:none;
+    left:26%;
+    top: 40% ;
+    transition:0.2s ease all; 
 }
 labelpasswordr2       {
-      font-family: "Arial", Helvetica, sans-serif	;
+    font-family: "Arial", Helvetica, sans-serif	;
 
-  color:#000000; 
-  font-size:18px;
-  font-weight:lighter;
-  position:absolute;
-  pointer-events:none;
-  left:15%;
-  top: 62% ;
-  transition:0.2s ease all; 
+    color:#000000; 
+    font-size:18px;
+    font-weight:lighter;
+    position:absolute;
+    pointer-events:none;
+    left:15%;
+    top: 62% ;
+    transition:0.2s ease all; 
 }
 .button {
-   padding:5px 30px;
-	border:none;
-	border-radius:4px;
-        -webkit-box-shadow:
-		inset 0 1px 3px #C93626, 
-		inset 0 -15px #C93626,
-		0 0 3px #66423E#2980b9;
-	-moz-box-shadow: #D94332;  
-	background-color: #D94332;
-        //top
-   // background: #c0392b;
-     width: -30em;
-     height: -6em;
-     margin-left:27%;
-     margin-top:-1em;
-     
+    padding:5px 30px;
+    border:none;
+    border-radius:4px;
+    -webkit-box-shadow:
+        inset 0 1px 3px #C93626, 
+        inset 0 -15px #C93626,
+        0 0 3px #66423E#2980b9;
+    -moz-box-shadow: #D94332;  
+    background-color: #D94332;
+    //top
+    // background: #c0392b;
+    width: -30em;
+    height: -6em;
+    margin-left:27%;
+    margin-top:-1em;
+
 }
 
 .button2 {
     padding:5px 30px;
-	border:none;
-	border-radius:4px;
-        -webkit-box-shadow:
-		inset 0 1px 3px #3897D7,
-		inset 0 -15px #2678AE,
-		0 0 3px #757B7F;
-	-moz-box-shadow: #2980b9;
-	background-color: #2980b9;
+    border:none;
+    border-radius:4px;
+    -webkit-box-shadow:
+        inset 0 1px 3px #3897D7,
+        inset 0 -15px #2678AE,
+        0 0 3px #757B7F;
+    -moz-box-shadow: #2980b9;
+    background-color: #2980b9;
     //background: #2980b9;
-     width: -30em;
-     height: -30em;
-     margin-left:25%;
-     margin-top: 10%;
-     text-align: center;
-     
+    width: -30em;
+    height: -30em;
+    margin-left:25%;
+    margin-top: 10%;
+    text-align: center;
+
 }
 #placeholder{
     float: left;
@@ -357,7 +357,7 @@ labelpasswordr2       {
     margin-right: auto;
     margin-top: auto;
     width: 80%;
-    
+
     font-family:'Comfortaa', cursive;
     color:white;
     font-size:1.6vw;
@@ -370,7 +370,7 @@ labelpasswordr2       {
     margin-right: auto;
     margin-top: auto;
     width: 80%;
-    
+
     font-family:'Comfortaa', cursive;
     color:white;
     font-size:1.1vw;
@@ -387,7 +387,7 @@ labelpasswordr2       {
     margin-top: 3%;
     float: left;
     opacity: 0.85;
-    
+
     font-family:'Comfortaa', cursive;
     color:white;
     font-size:1.9vw;
@@ -402,10 +402,10 @@ labelpasswordr2       {
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
-     margin-top: 3%;
+    margin-top: 3%;
     float: left;
     opacity: 0.85;
-    
+
     font-family: 'Comfortaa', cursive;
     color:white;
     font-size:1.9vw;
@@ -418,15 +418,15 @@ labelpasswordr2       {
     border-radius: 50%;
     margin-left: 10%;
     margin-right: 10%;
-     margin-top: 3%;
+    margin-top: 3%;
     float: left;
     opacity: 0.85;
-    
+
     font-family: 'Comfortaa', cursive;
     color:white;
     font-size:1.9vw;
     text-align:center;
-       
+
 }
 
 #p{
@@ -442,7 +442,7 @@ labelpasswordr2       {
     margin-left: auto;
     margin-top: auto;
     opacity: 0.85;
-    
+
     font-family:'Comfortaa', cursive;
     color:white;
     font-size:1vw;
@@ -503,45 +503,64 @@ a.fill-div {
     text-decoration: none;
 }
 
- .header-image1{
-                       position:absolute;
-                       top:0;
-                       bottom:0;   
-                       width: 100%;
-                       height: 100%;
-                       max-height:100%;
-                      max-width:100%;
-                     overflow:hidden;    
-                     left: 0;
-                     right: 0;
-                     z-index:-1;
-                }
-                #horizon-nav ul{
-                    padding: .2em 0;
-                    margin-top: 3%;
-                    list-style-type: none;
-                
-                    color: #FFF;
-                    width: 100%;
-                    font-family: 'Comfortaa', cursive;
-                    font-weight: bold;
-                    color:white;
-                    font-size:1.2vw;
-                    text-align: center;
-                }            
-                li{
-                    display: inline;
-                }
-                li a{
-                    text-decoration: none;
-                    margin: 0;
-                    color: #FFF;
-                    padding: .2em 1em;
-                    //border-left: 1px solid #FFF;
-                    //border-right: 1px solid #FFF;
-                }
-                li a:hover{
-                    
-                    color: #FFF;
-                }
-                
+.header-image1{
+    position:absolute;
+    top:0;
+    bottom:0;   
+    width: 100%;
+    height: 100%;
+    max-height:100%;
+    max-width:100%;
+    overflow:hidden;    
+    left: 0;
+    right: 0;
+    z-index:-1;
+}
+#horizon-nav ul{
+    padding: .2em 0;
+    margin-top: 3%;
+    list-style-type: none;
+
+    color: #FFF;
+    width: 100%;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color:white;
+    font-size:1.2vw;
+    text-align: center;
+}            
+li{
+    display: inline;
+}
+li a{
+    text-decoration: none;
+    margin: 0;
+    color: #FFF;
+    padding: .2em 1em;
+    //border-left: 1px solid #FFF;
+    //border-right: 1px solid #FFF;
+}
+li a:hover{
+
+    color: #FFF;
+}
+labelpartydesc{
+    font-family: "Arial", Helvetica, sans-serif	;
+    max-width: 100%;
+    width: 100%;
+    color:#999; 
+    font-size:18px;
+    font-weight:lighter;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    //transition:0.2s ease all; 
+}
+.allpartyfun{
+    position:relative; 
+    width: 40%;
+    margin-left: 40%;
+    margin-right: auto;
+    //float: left;
+}
