@@ -175,6 +175,14 @@ input:valid ~ .hightlight {
     width: 100%;
 
 }
+
+#placeholderAllCocktails{
+    float: left;
+    margin-left: 90%;
+    margin-top: 90%;
+    width: 100%;
+
+}
 #titlepad{
     float: left;
     margin-top: 5%;
@@ -390,6 +398,8 @@ labelpasswordr2       {
     text-align:center;
        
 }
+
+
 #search123{
     margin-bottom: auto; 
     margin-top:    40%;
