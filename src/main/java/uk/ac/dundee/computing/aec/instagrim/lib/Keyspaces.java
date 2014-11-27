@@ -124,8 +124,18 @@ public final class Keyspaces {
                 System.out.println("Can't create cocktails table " + et);
             } 
             
+            System.out.println("" + CreateIngredients);
+            try {
+                SimpleStatement cqlQuery = new SimpleStatement(CreateIngredients);
+                session.execute(cqlQuery);
+            } catch (Exception et) {
+                System.out.println("Can't create Ingredients table " + et);
+            } 
+            
              session.close();
             
+                       
+             
            
 
         } catch (Exception et) {
