@@ -15,7 +15,7 @@
         <div class="header-image1">
            <img src="bannerbanner.png">
         </div>
-        </div>
+     
 
 
     </head>
@@ -53,11 +53,11 @@
         <%  LoggedIn lg = (LoggedIn) session.getAttribute("LoggedIn");
             String UserName = lg.getUsername();%>
              
-            </div>  
+        
                     
-            
-            
-            
+                    
+                  <div class="group">  
+           
                   <div id="partyCircle">
                        <div id="formParty">
                    
@@ -66,31 +66,35 @@
                         
                             <input value =<% out.print(UserName); %> name="hostName" type="hidden"  > </li>
                             
-                            <input id="p" type="text" name="partyName"> <br> 
-                            <labelPartyName>Party Name:</labelPartyName> 
-                               
-                              <input id="p" type="text" name="date">  <br> 
-                             <labeldate>Date(DD-MM-YYYY):</labeldate>
-                                                         
+                            <labelPartyName>Party Name:</labelPartyName> <br>
+                            <input id="p" type="text" name="partyName"> 
+                          
+                            <labeldate>Date(DD-MM-YYYY):</labeldate><br>
+                              <input id="p" type="text" name="date">   
+                           
+                             <labellocation>Location:</labellocation><br>    
                              <input id="p" type="text" name="location">                      
-                             <labellocation>Location:</labellocation> <br>                             
-                             
-                            <input id="p" type="text" name="description"><br>                           
-                            <labeltheme>Theme of Party:</labeltheme>
-                             
-                            <input id="p" type="text" name="cocktail"><br>                           
-                            <labelpreferable>Preferable Cocktails(separated by commas):</labelpreferable>
+                                                     
+                             <labeltheme>Theme of Party:</labeltheme><br>
+                            <input id="p" type="text" name="description">                           
                             
-                            <input id="p" type="text" name="guests"><br>                           
-                            <labelguests>List of guests:</labelguests>
+                            <labelpreferable>Preferable Cocktails(separated by commas):</labelpreferable><br>
+                            <input id="p" type="text" name="cocktail">                         
                             
+                            <labelguests>List of guests:</labelguests><br>
+                            <input id="p" type="text" name="guests">  <br>                        
+                          
+                            
+                           
+                            <div class="buttonParty">
                              <input id="p" type="submit" name="Add Party" value="Add Party" class="button" >
-                      
-                                                                      
+                             </div>                          
                     </form>
                     </div>
                 
             </div>
+                  </div>
+                  </div>
     
                     
     </body>
