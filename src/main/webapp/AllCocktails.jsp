@@ -57,7 +57,7 @@ testing for commit
             <li><a href="/ilofcocktails/">Home</a>
             <li><a href="/ilofcocktails/AllCocktails">List of all cocktails</a>
             <li><a href="/ilofcocktails/Trending.jsp">Trending</a>
-            <li><a href="login.jsp"> Login/Register             
+            <li><a href="login.jsp"> Login/Register </a></li>            
         </ul>    </div>
         <%
                     }%>
@@ -83,6 +83,7 @@ testing for commit
         }
             </script>
 
+    <div id="data_block">   
     <article>
 
         <%
@@ -115,19 +116,19 @@ testing for commit
         <a href="javascript:ReverseDisplay('<%=d.getId()%>')" >
             <%out.println(d.getCocktailName());%>
         </a>
+       
         <div id="<%=d.getId()%>" style="display:none; color:white; ">
-            <p><% out.println(d.getOcasion() + "    " + d.getGlass() + "    " + d.getGarnish() + "    " + d.getType());%></p>
-            <p><% out.println(d.getSoi1() + " " + d.getSoi2() + " " + d.getSoi3() + " " + d.getSoi4() + " " + d.getSoi5() + " " + d.getSoi6() + " " + d.getSoi7() + " " + d.getSoi8() + " " + d.getSoi9() + " " + d.getSoi10() + " " + d.getSoi11() + " " + d.getSoi12());%></p>    
-
-
+             <div id="data_block1">  
+            <p><% out.println("Occasion:" + d.getOcasion() + " |  Glass:" + d.getGlass()  + " | Garnish:" + d.getGarnish()  + " | Type: " + d.getType());%></p>
+            <a><% out.println(d.getSoi1() + "<br>" + d.getSoi2() + "<br>" + d.getSoi3() + "<br>" + d.getSoi4() + "<br>" + d.getSoi5() + "<br>" + d.getSoi6() + "<br>" + d.getSoi7() + "<br>" + d.getSoi8() + "<br>" + d.getSoi9() + "<br>" + d.getSoi10() + "<br>" + d.getSoi11() + "<br>" + d.getSoi12());%></a>    
+        </div>
         </div>
         <%
              }
             }
         %>
     </article>
-
- 
+    </div>
 
 </body>
 </html>

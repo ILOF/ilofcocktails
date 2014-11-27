@@ -15,6 +15,7 @@ and open the template in the editor.
   position:relative; 
   margin-bottom:45px; 
 }
+
 input         {
     background-color: #2980b9;
  font-size:18px;
@@ -349,6 +350,33 @@ labelpasswordr2       {
     width: 80%;
 
 }
+
+#data_block{
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    width: 80%;
+    
+    font-family:'Comfortaa', cursive;
+    color:white;
+    font-size:1.6vw;
+    text-align:center;
+}
+
+#data_block1{
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    width: 80%;
+    
+    font-family:'Comfortaa', cursive;
+    color:white;
+    font-size:1.1vw;
+    text-align:center;
+}
+
 #search {
     background-color: #E67E22;
     width: 300px;
@@ -365,6 +393,8 @@ labelpasswordr2       {
     font-size:1.9vw;
     text-align:center;
 }
+
+
 #party {
     background-color: #8E44AD;
     width: 300px;
@@ -399,6 +429,37 @@ labelpasswordr2       {
        
 }
 
+#p{
+     background-color: #E67E22;  
+     
+}
+
+#partyCircle{
+    background-color: #E67E22;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    margin-right: 35%;
+    margin-left: 35%;
+    margin-top: 0%;
+    float: center;
+    opacity: 0.85;
+    
+    font-family:'Comfortaa', cursive;
+    color:white;
+    font-size:1.4vw;
+    text-align:center;
+}
+
+#formParty{
+    
+   
+    margin-bottom: auto; 
+    margin-top:    19%;
+    margin-left: 20%;
+    margin-right: 0%;
+    opacity: 1;
+}
 
 #search123{
     margin-bottom: auto; 
@@ -430,6 +491,7 @@ labelpasswordr2       {
     margin-right: 0%;
     opacity: 1;
 }
+
 
 
 a.fill-div {
