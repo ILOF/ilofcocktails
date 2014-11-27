@@ -18,6 +18,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import uk.ac.dundee.computing.aec.instagrim.lib.CassandraHosts;
+import uk.ac.dundee.computing.aec.instagrim.models.CocktailModel;
 import uk.ac.dundee.computing.aec.instagrim.models.PartyModel;
 import uk.ac.dundee.computing.aec.instagrim.models.User;
 
@@ -39,7 +40,19 @@ public class AddParty extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
             
                 PartyModel pm = new PartyModel();
+                CocktailModel cm = new CocktailModel();
                 pm.setCluster(cluster);
+                cm.setCluster(cluster);
+                               String[] Names = request.getParameter("cocktails").split(",");
+                               String test = "";
+                               for (int i = 0; i< Names.length; i++){
+                                   test = test+cm.idname(Names[i]);
+                                   if(i<Names.length-1){
+                                       test = test+",";
+                                   }
+                               }
+
+                String CocktailIds = cm.IDsFromNames(request.getParameter("cocktails"));
                             
                 String partyName = request.getParameter("partyName");
                 String hostName = request.getParameter("hostName");
@@ -50,7 +63,7 @@ public class AddParty extends HttpServlet {
                 String guests = request.getParameter("guests");
                                 
                 
-                pm.addParty(hostName, date, cocktails, description, guests, location, partyName);
+                pm.addParty(hostName, date, test, description, guests, location, partyName);
                 response.sendRedirect("/ilofcocktails/AllParties");
                
 	}

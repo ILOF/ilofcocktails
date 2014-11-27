@@ -105,24 +105,41 @@ public class CocktailModel {
                             CocktailsReturn.add(currentCocktail);
                         }                        
                }               
-               return CocktailsReturn;            
+               return CocktailsReturn;      
         }
+               
+                public String idname(String SearchCriteria) {
+                    String ID = "";
+                         java.util.LinkedList<CocktailStore> Cocktails = AllCocktails();
+                         for (int i = 0; i< Cocktails.size(); i++){
+                             CocktailStore cs = Cocktails.get(i);
+                             if(cs.getCocktailName().toLowerCase().equals(SearchCriteria.toLowerCase())){
+                              ID =  ""+cs.getId();
+                             //ID = Cocktails.get(i).getId();
+                         }else{
+                                 
+                                 }
+                    
+                    
+                }
+                         return ID;
+                }
         
-        public java.util.LinkedList<String> IDsFromNames(String SearchCriteria) {
+        
+        public String IDsFromNames(String SearchCriteria) {
                String[] Names = SearchCriteria.split(",");
+               String Idsout = "";
 
-               java.util.LinkedList<CocktailStore> Cocktails = AllCocktails();
-               java.util.LinkedList<String> CocktailsReturn = new java.util.LinkedList<>();
-               for(int i = 0; i < Names.length; i++){
+              for (int i = 0; i<Names.length; i++){
+                  Idsout = Idsout+""+idname(Names[i]);
+              }
+                   
+               
+               
 
-               for (int j = 0; j < Cocktails.size(); j++) {
-                        CocktailStore currentCocktail = Cocktails.get(j); 
-                        if(currentCocktail.getCocktailName().toLowerCase().contains(Names[i].toLowerCase())  ){
-                            CocktailsReturn.add(currentCocktail.getId());
-                             }
-                        }                        
-               }               
-               return CocktailsReturn;            
+              
+               //Idsout = ""+Names.length;
+               return Idsout;
         }
 
         

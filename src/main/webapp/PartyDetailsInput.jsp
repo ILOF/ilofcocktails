@@ -79,7 +79,7 @@
                             <input id="p" type="text" name="description">                           
                             
                             <labelpreferable>Preferable Cocktails(separated by commas):</labelpreferable><br>
-                            <input id="p" type="text" name="cocktail">                         
+                            <input id="p" type="text" name="cocktails">                         
                             
                             <labelguests>List of guests:</labelguests><br>
                             <input id="p" type="text" name="guests">  <br>                        
