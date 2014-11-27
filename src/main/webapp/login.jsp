@@ -79,11 +79,12 @@
                         <div class="group">
                        
                             <input type="text" name="username"> <br> 
-                               <labelpassword>Password</labelpassword>
+                            
+                               <labelpassword>Password:</labelpassword>
                             <input type="password" name="password">
                            <!--   <span class="bar"></span> -->
                             
-                            <labelusername> Username</labelusername> 
+                            <labelusername>Username:</labelusername> 
                       <!--   <input type="text" value="Login">-->
                       
                        <input id="input1" type="submit" name="Register" class="button2" >
@@ -101,17 +102,17 @@
                     <form method="POST"  action="Register">
                         <div class="group">
                        
-                            <input type="text" name="username"> <br> 
-                            <labelusernameregister>Username</labelusernameregister> 
+                            <input id="r" text" name="username"> <br> 
+                            <labelusernameregister>Username:</labelusernameregister> 
                                
-                              <input type="text" name="email">  <br> 
-                             <labelemailr>Email</labelemailr>
+                              <input id="r" type="text" name="email">  <br> 
+                             <labelemailr>Email:</labelemailr>
                                                          
-                             <input type="password" name="password">                      
-                             <labelpasswordr>Password</labelpasswordr> <br>                             
+                             <input id="r" type="password" name="password">                      
+                             <labelpasswordr>Password:</labelpasswordr> <br>                             
                              
-                            <input type="password" name="password2"><br>                           
-                            <labelpasswordr2>Repeat Your Password</labelpasswordr2>
+                            <input id="r" type="password" name="password2"><br>                           
+                            <labelpasswordr2>Repeat Your Password:</labelpasswordr2>
                              
                              <input id="input1" type="submit" name="Register" class="button" >
                       

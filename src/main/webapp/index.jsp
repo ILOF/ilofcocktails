@@ -26,7 +26,7 @@
     </div>
         
         <div class="header-image1">
-                   <img src="bannernew.jpg" class="header-image" alt="Cocktail_banner"> 
+            <img src="bannernew.jpg" class="header-image" alt="Cocktail_banner"> 
 
           
         </div>

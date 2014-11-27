@@ -16,14 +16,23 @@ and open the template in the editor.
   margin-bottom:45px; 
 }
 input         {
-
+    background-color: #2980b9;
  font-size:18px;
   padding:10px 10px 10px 5px;
   display:block;
   width:300px;
   border:none;
-  border-bottom:1px solid #757575;
+  border-bottom:1px solid #000000;
 }
+#r {
+    
+        background-color: #c0392b;
+
+    
+    
+    
+}
+
 #input1{
     font-size:18px;
   padding:10px 10px 10px 5px;
@@ -176,6 +185,7 @@ input:valid ~ .hightlight {
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
+     margin-top: 3%;
     float: left;
     opacity: 0.85;
     
@@ -185,7 +195,7 @@ input:valid ~ .hightlight {
     text-align:center;
 }
 #loginCircle {
-    background-color: #8E44AD;
+    background-color: #2980b9;
     width: 500px;
     height: 500px;
     border-radius: 50%;
@@ -200,14 +210,14 @@ input:valid ~ .hightlight {
     text-align:center;
 }
 #registercircle {
-    background-color: #8E44AD;
+    background-color: #c0392b;
     width: 500px;
     height: 500px;
     border-radius: 50%;
     margin-left: 20%;
     margin-right: auto;
     float: left;
-    opacity: 0.85;
+    opacity: 0.95;
     
     font-family: 'Comfortaa', cursive;
     color:white;
@@ -217,7 +227,7 @@ input:valid ~ .hightlight {
 labelpassword          {
       font-family: "Arial", Helvetica, sans-serif	;
 
-  color:#999; 
+  color:#000000; 
   font-size:18px;
   font-weight:lighter;
   position:absolute;
@@ -230,7 +240,7 @@ labelpassword          {
 labelusername          {
       font-family: "Arial", Helvetica, sans-serif	;
 
-  color:#999; 
+  color:#000000; 
   font-size:18px;
   font-weight:lighter;
   position:absolute;
@@ -243,12 +253,12 @@ labelusername          {
 labelusernameregister          {
       font-family: "Arial", Helvetica, sans-serif	;
  text-align: center;
-  color:#999; 
+  color:#000000; 
   font-size:18px;
   font-weight:lighter;
   position:absolute;
   pointer-events:none;
-  left:26%;
+  left: 22%;
   top: -7% ;
   transition:0.2s ease all; 
 }
@@ -256,7 +266,7 @@ labelusernameregister          {
 labelemailr       {
       font-family: "Arial", Helvetica, sans-serif	;
 
-  color:#999;
+  color:#000000;
   text-align: center;
   font-size:18px;
   font-weight:lighter;
@@ -270,7 +280,7 @@ labelemailr       {
 labelpasswordr       {
       font-family: "Arial", Helvetica, sans-serif	;
 
-  color:#999; 
+  color:#000000; 
   font-size:18px;
   font-weight:lighter;
   position:absolute;
@@ -282,18 +292,27 @@ labelpasswordr       {
 labelpasswordr2       {
       font-family: "Arial", Helvetica, sans-serif	;
 
-  color:#999; 
+  color:#000000; 
   font-size:18px;
   font-weight:lighter;
   position:absolute;
   pointer-events:none;
-  left:26%;
+  left:15%;
   top: 62% ;
   transition:0.2s ease all; 
 }
 .button {
-   
-    background: #8E44AD;
+   padding:5px 30px;
+	border:none;
+	border-radius:4px;
+        -webkit-box-shadow:
+		inset 0 1px 3px #C93626, 
+		inset 0 -15px #C93626,
+		0 0 3px #66423E#2980b9;
+	-moz-box-shadow: #D94332;  
+	background-color: #D94332;
+        //top
+   // background: #c0392b;
      width: -30em;
      height: -6em;
      margin-left:27%;
@@ -302,12 +321,21 @@ labelpasswordr2       {
 }
 
 .button2 {
-   
-    background: #8E44AD;
+    padding:5px 30px;
+	border:none;
+	border-radius:4px;
+        -webkit-box-shadow:
+		inset 0 1px 3px #3897D7,
+		inset 0 -15px #2678AE,
+		0 0 3px #757B7F;
+	-moz-box-shadow: #2980b9;
+	background-color: #2980b9;
+    //background: #2980b9;
      width: -30em;
      height: -30em;
      margin-left:25%;
      margin-top: 10%;
+     text-align: center;
      
 }
 #search {
@@ -316,6 +344,8 @@ labelpasswordr2       {
     height: 300px;
     border-radius: 50%;
     margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 3%;
     float: left;
     opacity: 0.85;
     
@@ -361,6 +391,7 @@ labelpasswordr2       {
     height: 300px;
     border-radius: 50%;
     margin-left: 10%;
+     margin-top: 3%;
     float: left;
     opacity: 0.85;
     
