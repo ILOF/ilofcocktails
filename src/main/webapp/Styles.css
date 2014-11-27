@@ -430,40 +430,42 @@ labelpasswordr2       {
 }
 
 #p{
-    background-color: #E67E22;  
-
+     background-color: #E67E22;   
 }
 
 #partyCircle{
     background-color: #E67E22;
-    width: 600px;
-    height: 600px;
+    width: 700px;
+    height: 700px;
     border-radius: 50%;
-    margin-right: 35%;
-    margin-left: 35%;
-    margin-top: 0%;
-    float: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
     opacity: 0.85;
 
     font-family:'Comfortaa', cursive;
     color:white;
-    font-size:1.4vw;
-    text-align:center;
+    font-size:1vw;
+    text-align:left;
 }
 
 #formParty{
-
-
+    padding-top: 10%;
     margin-bottom: auto; 
-    margin-top:    19%;
-    margin-left: 20%;
-    margin-right: 0%;
-    opacity: 1;
+    margin-top:    auto;
+    margin-left: 30%;
+    margin-right: auto;
+   
+}
+.buttonParty{ 
+    text-align: center;
+    margin-left: -40%;
+
 }
 
 #search123{
-    margin-bottom: auto; 
-    margin-top:    40%;
+    margin-bottom: -10%; 
+    margin-top:    60%;
     margin-left: 10%;
     margin-right: 10%;
     opacity: 1;
@@ -541,4 +543,24 @@ li a{
 li a:hover{
 
     color: #FFF;
+}
+labelpartydesc{
+    font-family: "Arial", Helvetica, sans-serif	;
+    max-width: 100%;
+    width: 100%;
+    color:#999; 
+    font-size:18px;
+    font-weight:lighter;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    //transition:0.2s ease all; 
+}
+.allpartyfun{
+    position:relative; 
+    width: 40%;
+    margin-left: 40%;
+    margin-right: auto;
+    //float: left;
 }

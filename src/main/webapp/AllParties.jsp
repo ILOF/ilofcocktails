@@ -62,7 +62,7 @@ testing for commit
                     
                     
     <form method="POST" action="/ilofcocktails/SearchParty">            
-        <div class="group">  
+        <div class="allpartyfun">  
             <input type="text" required name = "searchCriteria">
             <span class="bar"></span>
             <span class="highlight"></span>
@@ -100,11 +100,11 @@ testing for commit
 
         %>
 
-        <div class="group">  
+        <div class="allpartyfun">  
             <input type="text" required readonly>
 
 
-            <label><% out.println(p.getPartyName() + " hosted by " + p.getHostName() + " on " + p.getDate()); %></label>
+            <labelpartydesc><% out.println(p.getPartyName() + " hosted by " + p.getHostName() + " on " + p.getDate()); %></labelpartydesc>
 
             <!-- Check the details:               -->
             <form method="POST"  action="selectedParty">
