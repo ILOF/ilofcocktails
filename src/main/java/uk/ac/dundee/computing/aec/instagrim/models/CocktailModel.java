@@ -107,6 +107,23 @@ public class CocktailModel {
                }               
                return CocktailsReturn;            
         }
+        
+        public java.util.LinkedList<String> IDsFromNames(String SearchCriteria) {
+               String[] Names = SearchCriteria.split(",");
+
+               java.util.LinkedList<CocktailStore> Cocktails = AllCocktails();
+               java.util.LinkedList<String> CocktailsReturn = new java.util.LinkedList<>();
+               for(int i = 0; i < Names.length; i++){
+
+               for (int j = 0; j < Cocktails.size(); j++) {
+                        CocktailStore currentCocktail = Cocktails.get(j); 
+                        if(currentCocktail.getCocktailName().toLowerCase().contains(Names[i].toLowerCase())  ){
+                            CocktailsReturn.add(currentCocktail.getId());
+                             }
+                        }                        
+               }               
+               return CocktailsReturn;            
+        }
 
         
         
