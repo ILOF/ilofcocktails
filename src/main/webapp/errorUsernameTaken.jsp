@@ -9,9 +9,13 @@
 <title>Error: empty username/password</title>
 </head>
 <body>
-
+ <style>
+    body{
+    background-color: #ecf0f1;
+    }
+  </style>
 	<header>
-	 	<h1  style="font-family: 'Comfortaa', cursive; font-size: 86px"><center>IlofCocktails</center></h1>
+	 	<h1  style="font-family: 'Comfortaa', cursive; font-size: 86px"><center>ILOFCocktails</center></h1>
      </header>
         
 <h3  style="font-family: Arial"><center>Somebody has already taken that username. Please try again and choose another. </center><br><br> <center>Redirecting...</center></h3>      

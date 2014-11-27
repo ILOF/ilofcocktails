@@ -9,9 +9,14 @@
 <title>Error: empty username/password</title>
 </head>
 <body>
+    <style>
+    body{
+    background-color: #ecf0f1;
+    }
+  </style>
 
 	<header>
-	 	<h1  style="font-family: 'Comfortaa', cursive; font-size: 86px"><center>IlofCocktails</center></h1>
+	 	<h1  style="font-family: 'Comfortaa', cursive; font-size: 86px"><center>ILOFCocktails</center></h1>
      </header>
         
 <h3  style="font-family: Arial"><center> You forgot to type in a username or password. </center><br><br> <center>Redirecting...</center></h3>      

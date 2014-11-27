@@ -9,9 +9,13 @@
 <title>Error: empty username/password</title>
 </head>
 <body>
-
+ <style>
+    body{
+    background-color: #ecf0f1;
+    }
+  </style>
 	<header>
-	 	<h1  style="font-family: 'Comfortaa', cursive; font-size: 86px"><center>IlofCocktails</center></h1>
+	 	<h1  style="font-family: 'Comfortaa', cursive; font-size: 86px"><center>ILOFCocktails</center></h1>
      </header>
         
 <h3  style="font-family: Arial"><center>Your passwords do not match. Please try again and make sure they're exactly the same.</center><br><br> <center>Redirecting...</center></h3>      
