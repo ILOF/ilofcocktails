@@ -104,8 +104,8 @@ public class list extends HttpServlet {
                 java.util.LinkedList<String> ingredientsHad = new java.util.LinkedList<>();
                 Drinks.add("247");
                 Drinks.add("619");
-                ingredientsHad.add("bitters");
-                                ingredientsHad.add("oreo cookies");
+                ingredientsHad.add("");
+                                ingredientsHad.add("bitters");
 
 
 

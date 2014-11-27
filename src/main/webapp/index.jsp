@@ -10,6 +10,7 @@
 <%@page import="uk.ac.dundee.computing.aec.instagrim.stores.*" %>
 <!DOCTYPE html>
 <html>
+    
             <link rel="stylesheet" type="text/css" href="Styles.css" />
            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <head>
@@ -25,7 +26,8 @@
     </div>
         
         <div class="header-image1">
-            <img src="bannernew.jpg" class="header-image" alt="Cocktail_banner">
+                   <img src="bannernew.jpg" class="header-image" alt="Cocktail_banner"> 
+
           
         </div>
         
