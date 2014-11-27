@@ -34,8 +34,8 @@
         </div>
     </head>
     <body>
-                 <nav>
-            <ul>
+            
+            
 
                
                     <%
@@ -46,7 +46,7 @@
                             if (lg.getlogedin()) {
                     %>
                 <div id="horizon-nav">
-                <ul>    
+                <ul id="navlist">    
                 <li><a href="/ilofcocktails/AllCocktails">List of all cocktails</a>
                 <li><a href="/ilofcocktails/AllParties">Check the upcoming parties</a>
                 <li><a href="/ilofcocktails/PartyDetailsInput.jsp">Organise a new party</a>
@@ -66,8 +66,8 @@
                     }%>
                     
                     
-            </ul>
-        </nav>
+        
+        
                     
                   <div class="group">     
         <div id="placeholder">
