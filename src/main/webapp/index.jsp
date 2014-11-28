@@ -25,8 +25,8 @@
                     <%}
                             }else{
                                 %>
-    <h4><a style = "font-family: Arial" align="left" href="login.jsp"> Login             
-            <a style="font-family: Arial" align="left"  href="register.jsp"> Register </a> </h4>
+    <h4><a style = "font-family: Arial" align="left" href="login.jsp"> Login/Register             
+             </a> </h4>
     <%
                                         
                             
