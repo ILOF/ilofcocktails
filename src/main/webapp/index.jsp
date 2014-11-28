@@ -111,7 +111,7 @@
                     <form method="POST" action="/ilofcocktails/SearchCocktail" id="searchform">
 
                         <div class="group">  
-                            <input id="inputsearch" type="text" required name = "searchCriteria">
+                            <input id="inputsearch" type="text" name = "searchCriteria">
 
                             <%--   <span class="bar"></span>
                              

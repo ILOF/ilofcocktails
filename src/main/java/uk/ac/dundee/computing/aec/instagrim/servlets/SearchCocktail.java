@@ -41,10 +41,37 @@ public class SearchCocktail extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
                 String SearchCriteria = request.getParameter("searchCriteria");
+                String SearchType = request.getParameter("searchlist");
+                for (int i = 0; i < 100; i++){
+                    System.out.print(SearchType);
+                }
 		SearchCriteria = SearchCriteria.toLowerCase();
                 CocktailModel cm = new CocktailModel();
                 cm.setCluster(cluster);
-                java.util.LinkedList<CocktailStore> Cocktails = cm.SearchNames(SearchCriteria);
+                java.util.LinkedList<CocktailStore> Cocktails = new java.util.LinkedList<>();
+                if(SearchType.equals("Name")){
+                Cocktails = cm.SearchNames(SearchCriteria);
+                }
+                else if(SearchType.equals("Occasion")){
+                Cocktails = cm.SearchOcasion(SearchCriteria);
+                    
+                }
+                else if(SearchType.equals("Glass")){
+                Cocktails = cm.SearchGlass(SearchCriteria);
+                    
+                }
+                else if(SearchType.equals("Type")){
+                Cocktails = cm.SearchType(SearchCriteria);
+                    
+                }
+                else if(SearchType.equals("IngredientHard")){
+                Cocktails = cm.HardSearch(SearchCriteria);
+                    
+                }
+                else if(SearchType.equals("IngredientSoft")){
+                Cocktails = cm.SoftSearchIngredients(SearchCriteria);
+                    
+                }
                 RequestDispatcher rd = request.getRequestDispatcher("/AllCocktails.jsp");
                 request.setAttribute("Cocktails", Cocktails);
                 rd.forward(request, response);
