@@ -100,9 +100,12 @@
                 <div id="search12">
                     <div class="select-style">
                         Search by   <select name="searchlist" form="searchform">
-                            <option value="cocktail">Cocktails</option>
-                            <option value="Occasion">Occasions</option>
-                            <option value="Party">Parties</option>
+                            <option value="Occasion">Occasion</option>
+                            <option value="Type">Type</option>
+                            <option value="Glass">Glass</option>
+                            <option value="Name">Name</option>
+                            <option value="IngredientHard">Ingredient Hard</option>
+                            <option value="IngredientSoft">Ingredient Soft</option>
                         </select>
                     </div>
                     <form method="POST" action="/ilofcocktails/SearchCocktail" id="searchform">
