@@ -19,7 +19,8 @@ public final class Keyspaces {
             String CreateCocktailsTable = "CREATE TABLE if not exists ilofcocktails.cocktails (\n"
                     + "      drinkid int,\n"
                     + "      name text,\n"
-                    + "      type text,\n"
+                    + "      type text,\n"                    
+                    + "      ingredients text,\n"
                     + "      glass text,\n"
                     + "      garnish text,\n"
                     + "      ocasion text,\n"
@@ -66,6 +67,11 @@ public final class Keyspaces {
             String CreateTrending = "CREATE TABLE if not exists ilofcocktails.trending (\n"
                     + "      position int PRIMARY KEY,\n"
                     + "      cocktailid  text, \n"                    
+                    + "  );";
+            
+            String CreateFavourites = "CREATE TABLE if not exists ilofcocktails.favourites (\n"
+                    + "      drinkid int PRIMARY KEY,\n"
+                    + "      username  text, \n"                    
                     + "  );";
             
             
@@ -122,6 +128,14 @@ public final class Keyspaces {
                 session.execute(cqlQuery);
             } catch (Exception et) {
                 System.out.println("Can't create cocktails table " + et);
+            } 
+            
+            System.out.println("" + CreateFavourites);
+            try {
+                SimpleStatement cqlQuery = new SimpleStatement(CreateFavourites);
+                session.execute(cqlQuery);
+            } catch (Exception et) {
+                System.out.println("Can't create Favourites table " + et);
             } 
             
             System.out.println("" + CreateIngredients);
