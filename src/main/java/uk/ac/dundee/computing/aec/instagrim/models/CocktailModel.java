@@ -124,6 +124,23 @@ public class CocktailModel {
                 }
                          return ID;
                 }
+                
+                public String nameid(String SearchCriteria){
+                    String name = "";
+                         java.util.LinkedList<CocktailStore> Cocktails = AllCocktails();
+                         for (int i = 0; i< Cocktails.size(); i++){
+                             CocktailStore cs = Cocktails.get(i);
+                             if(cs.getId().toLowerCase().contains(SearchCriteria.toLowerCase())){
+                              name =  ""+cs.getCocktailName();
+                             //ID = Cocktails.get(i).getId();
+                         }else{
+                                 
+                                 }
+                    
+                    
+                }
+                         return name;
+                }
         
         
         public String IDsFromNames(String SearchCriteria) {
@@ -258,6 +275,8 @@ public class CocktailModel {
                          }
 
           }
+          
+          
           for(int i = 0; i < ingredientsNeeded.size(); i++){
               if(!ingredientsHad.contains(ingredientsNeeded.get(i))){
                   ls.addItem(ingredientsNeeded.get(i));
@@ -265,6 +284,7 @@ public class CocktailModel {
           
           }
           
+     
           
           
           
@@ -280,6 +300,39 @@ public class CocktailModel {
           return ls;
           
       }
+      
+      
+           public String shopping(String Ids){
+              String list = "";
+              String[] SearchWords = Ids.split(",");
+              for (int j = 0; j<SearchWords.length; j++){
+
+                        Session session = cluster.connect("ilofcocktails");
+                         PreparedStatement ps = session.prepare("select * from ingredients where cocktailid =?");
+                         ResultSet rs = null;
+                         BoundStatement boundStatement = new BoundStatement(ps);
+                         rs = session.execute( // this is where the query is executed
+                         boundStatement.bind( // here you are binding the 'boundStatement'
+                                            Integer.parseInt(SearchWords[j])));
+                         if (rs.isExhausted()) {
+                        System.out.println("No cocktails (should never happen)");
+                        return null;
+                        } else {
+                            for (Row row : rs) {
+                            if(!list.contains(row.getString("ingredient"))){
+                            list = list + (row.getString("ingredient").toLowerCase()) + " | ";
+                            
+                            }
+                            //System.out.println(row.getString("ingredient"));
+                            }
+                         }
+
+          }
+
+              return list;
+              
+          }
+          
       
 
 

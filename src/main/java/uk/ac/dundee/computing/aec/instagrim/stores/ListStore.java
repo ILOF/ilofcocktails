@@ -36,6 +36,8 @@ public class ListStore {
     public java.util.LinkedList<String> getItems() {
         return items;
     }
+    
+    
 
     /**
      * @param items the items to set
