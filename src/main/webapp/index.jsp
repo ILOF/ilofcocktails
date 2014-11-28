@@ -98,7 +98,27 @@
             
             <div id="party">
                 <div id="search12">
-                        <a href="/ilofcocktails/PartyDetailsInput.jsp" class="fill-div">Search for a cocktail</a>
+                    <div class="select-style">
+                        Search by   <select name="searchlist" form="searchform">
+                            <option value="cocktail">Cocktails</option>
+                            <option value="Occasion">Occasions</option>
+                            <option value="Party">Parties</option>
+                        </select>
+                    </div>
+                    <form method="POST" action="/ilofcocktails/SearchCocktail" id="searchform">
+
+                        <div class="group">  
+                            <input id="inputsearch" type="text" required name = "searchCriteria">
+
+                            <%--   <span class="bar"></span>
+                             
+                                                    <span class="highlight"></span>  --%>
+
+
+
+                            <%--   <input type="submit" value="Search"> <br><br> --%>
+
+                        </div>
                     </div>
             </div>
             

@@ -42,7 +42,9 @@ testing for commit
     %>
     <div id="horizon-nav">
         <ul id="navlist">    
+            <li><a href="/ilofcocktails/">Home</a>
             <li><a href="/ilofcocktails/AllCocktails">List of all cocktails</a>
+               
             <li><a href="/ilofcocktails/Trending.jsp">Trending</a>
             <li><a href="/ilofcocktails/Logout">Logout</a>
         </ul>    </div>
