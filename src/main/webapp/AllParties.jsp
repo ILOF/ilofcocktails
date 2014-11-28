@@ -146,7 +146,10 @@ testing for commit
                  <p><% out.println("Date: " + p.getDate() + "| Location: " + p.getLocation() + "| Theme: " + p.getDescription()); %></p>
                  <p><% out.println("Guests: " + p.getGuests()); %></p>
                  <p><% out.println("Cocktails: " + Cocktailnames); %></p>
-                 <a><% out.println("Shopping: " + shopping); %></a>
+                 <p><% out.println("Shopping: "); %></p>
+                 <a><% out.println(shopping); %></a>
+                 
+               
             
             
             

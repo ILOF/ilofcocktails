@@ -303,7 +303,7 @@ public class CocktailModel {
       
       
            public String shopping(String Ids){
-              String list = "";
+              String list = "| ";
               String[] SearchWords = Ids.split(",");
               for (int j = 0; j<SearchWords.length; j++){
 
